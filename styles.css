@@ -1,0 +1,65 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #343a40;
+}
+
+/* Hero Section */
+#hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+    text-align: left;
+    padding: 100px 0;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#hero p {
+    font-size: 1.2rem;
+}
+
+/* Features Section */
+#features .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#features .card:hover {
+    transform: scale(1.05);
+}
+
+/* Use Cases List */
+#usecases .list-group-item {
+    font-size: 1.1rem;
+}
+
+/* Contact Form */
+#contact form input,
+#contact form textarea {
+    border-radius: 0;
+    border: 2px solid #e9ecef;
+    margin-bottom: 1rem;
+}
+
+#contact form button {
+    border-radius: 0;
+    background: #007bff;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: #343a40;
+    color: #fff;
+    text-align: center;
+}
