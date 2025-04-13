@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TasteIQ - Elevate Your Restaurant with Cutting-Edge Dining Technology">
-  <title>TasteIQ | Revolutionizing the Dining Experience</title>
+  <meta name="description" content="TasteIQ - The Intelligent Restaurant OS. Switch today and save!">
+  <title>TasteIQ | 15-Min Setup, Zero Risk Switch</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -64,15 +65,16 @@
     }
     
     .feature-icon {
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: #6e48aa;
       margin-bottom: 1rem;
     }
+    
     .google-form-container {
       position: relative;
       width: 100%;
       height: 0;
-      padding-bottom: 100%; /* Adjust this value to control the aspect ratio */
+      padding-bottom: 100%;
       overflow: hidden;
     }
     
@@ -84,9 +86,10 @@
       height: 100%;
       border: 0;
     }
+    
     #hero {
-      background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
-      padding: 100px 0;
+      background: url('https://images.unsplash.com/photo-1508424757105-b6d5ad9329d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      padding: 120px 0;
       position: relative;
     }
     
@@ -97,7 +100,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.6);
     }
     
     #hero .container {
@@ -109,6 +112,180 @@
       background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+    
+    .feature-list li {
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 30px;
+    }
+    
+    .feature-list li i {
+      position: absolute;
+      left: 0;
+      top: 4px;
+      color: #6e48aa;
+    }
+    
+    .benefit-card {
+      height: 100%;
+      padding: 25px;
+    }
+    
+    .benefit-card h5 {
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #6e48aa;
+    }
+    
+    .benefit-icon {
+      font-size: 1.5rem;
+      color: #6e48aa;
+      margin-bottom: 15px;
+    }
+    
+    .badge-special {
+      background-color: #ff4081;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    
+    .team-badge {
+      background-color: #6e48aa;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    
+    .timer-box {
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      padding: 10px 15px;
+      margin-top: 15px;
+      display: inline-block;
+    }
+    
+    .timer-box span {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    
+    .step-card {
+      position: relative;
+      padding-left: 80px;
+      margin-bottom: 30px;
+    }
+    
+    .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 60px;
+      height: 60px;
+      background-color: #6e48aa;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .switch-card {
+      border-left: 4px solid #6e48aa;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .testimonial-card {
+      padding: 25px;
+      position: relative;
+    }
+    
+    .testimonial-card:before {
+      content: '"';
+      font-size: 4rem;
+      position: absolute;
+      top: -20px;
+      left: 10px;
+      color: rgba(110, 72, 170, 0.1);
+    }
+    
+    .price-card {
+      text-align: center;
+      padding: 30px;
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .price-badge {
+      position: absolute;
+      top: 22px;
+      right: -45px;
+      background-color: #ff4081;
+      color: white;
+      padding: 5px 40px;
+      transform: rotate(45deg);
+      font-weight: 500;
+    }
+    
+    .price-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #6e48aa;
+    }
+    
+    .price-period {
+      color: #666;
+      font-size: 0.8rem;
+    }
+    
+    .contrast-box {
+      background-color: #f8f9fa;
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+    
+    .highlight-text {
+      color: #6e48aa;
+      font-weight: 600;
+    }
+    
+    .countdown-timer {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 15px 0;
+    }
+    
+    .countdown-box {
+      background-color: #6e48aa;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      width: 60px;
+      text-align: center;
+    }
+    
+    .countdown-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    
+    .countdown-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
     }
   </style>
 </head>
@@ -124,11 +301,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="./sales-partner.html">Join as a Sales Partner</a></li>
+          <li class="nav-item"><a class="nav-link" href="#quickstart">15-Min Setup</a></li>
+          <li class="nav-item"><a class="nav-link" href="#switch">Why Switch</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
           <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="./pricing.html">Pricing</a></li>
-          <li class="nav-item"><a class="nav-link" href="#referral">Referrals</a></li>
-          <li class="nav-item"><a class="nav-link" href="#usecases">Use Cases</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Success Stories</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -139,85 +316,173 @@
   <section id="hero" class="text-white text-center d-flex align-items-center">
     <div class="container">
       <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="badge-special mb-3">Trusted by 500+ Restaurant Owners</div>
+          <h1 class="display-4 fw-bold mb-3">Switch to TasteIQ in 15 Minutes<br>Keep Your Current Software FREE</h1>
+          <p class="lead mb-2">TasteIQ empowers restaurants to scale effortlessly, operate efficiently, and delight customers consistently - all from a single intelligent platform with ZERO risk.</p>
+          <div class="timer-box">
+            <p class="mb-0">Limited Time Offer Ends In:</p>
+            <div class="countdown-timer">
+              <div class="countdown-box">
+                <div class="countdown-value">14</div>
+                <div class="countdown-label">Days</div>
+              </div>
+              <div class="countdown-box">
+                <div class="countdown-value">06</div>
+                <div class="countdown-label">Hours</div>
+              </div>
+              <div class="countdown-box">
+                <div class="countdown-value">32</div>
+                <div class="countdown-label">Mins</div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <a href="#contact" class="btn btn-primary btn-lg me-3">Get Started Today</a>
+            <a href="#pricing" class="btn btn-outline-light btn-lg">See Our Guarantee</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Start Section -->
+  <section id="quickstart" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="mb-4">Setup Your Restaurant in Just 15 Minutes</h2>
+          <p class="lead">No lengthy onboarding. No complicated training. Get your entire restaurant system running in minutes, not weeks.</p>
+          
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Upload Your Menu</h3>
+            <p>Simply take a photo of your menu or upload existing menu images. Our AI instantly extracts all items, prices, and categories.</p>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Enter Basic Information</h3>
+            <p>Add your restaurant name, address, and tax details. Choose your preferred themes and colors to match your brand.</p>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Go Live!</h3>
+            <p>Start using TasteIQ immediately on your existing devices. No special hardware required – works on any tablet, phone, or PC.</p>
+          </div>
+          
+          <div class="d-flex align-items-center mt-4">
+            <span class="badge-special me-2">Get Onboarding Specialist</span>
+            <p class="mb-0 ms-2">Get personalized handholding during setup </p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow p-3">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Restaurant setup" class="img-fluid rounded-3 mb-3">
+            <div class="row text-center">
+              <div class="col-4">
+                <h3 class="text-primary">15</h3>
+                <p class="small">Minutes to Setup</p>
+              </div>
+              <div class="col-4">
+                <h3 class="text-primary">1</h3>
+                <p class="small">Hour Staff Training</p>
+              </div>
+              <div class="col-4">
+                <h3 class="text-primary">0</h3>
+                <p class="small">Special Hardware</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Switch Section -->
+  <section id="switch" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Why Restaurant Owners Are Switching to TasteIQ</h2>
+      
+      <div class="row">
+        <div class="col-md-6">
+          <div class="switch-card">
+            <h3><i class="bi bi-cash-coin me-2 text-primary"></i> Cost Savings Guarantee</h3>
+            <p>Use your current system FREE until your subscription ends, then pay <strong>15% LESS</strong> than your current provider.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="switch-card">
+            <h3><i class="bi bi-lightning-charge me-2 text-primary"></i> All-In-One Solution</h3>
+            <p>Stop paying for multiple systems. TasteIQ includes ALL features in one subscription – no hidden add-ons.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="switch-card">
+            <h3><i class="bi bi-graph-up me-2 text-primary"></i> Boost Your Revenue</h3>
+            <p>Restaurants using TasteIQ report average 22% increase in direct orders, reducing aggregator commissions.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="switch-card">
+            <h3><i class="bi bi-clock-history me-2 text-primary"></i> Save 20+ Hours/Week</h3>
+            <p>Automated inventory, billing and reporting save managers significant time on manual tasks.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-5">
         <div class="col-lg-8 mx-auto">
-          <h1 class="display-4 fw-bold mb-4">Revolutionize Your Restaurant with TasteIQ in Less Than 6 Hours</h1>
-          <p class="lead mb-5">Empower your business with cutting-edge dining technology. Boost efficiency, delight customers, and stay ahead in the competitive restaurant industry.</p>
-          <a href="#contact" class="btn btn-primary btn-lg">Get Your Free Demo Today</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section id="features" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">Elevate Your Dining Experience and Revenue</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 text-center p-4">
-            <div class="card-body">
-              <i class="bi bi-phone feature-icon"></i>
-              <h3 class="card-title">Smart Self-POS System</h3>
-              <p class="card-text">Streamline orders with our intuitive self-service POS, reducing wait times and minimizing errors. Empower your customers and staff alike.</p>
+          <div class="card p-4 bg-white shadow-sm">
+            <h3 class="text-center mb-4">TasteIQ vs. Your Current System</h3>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead class="bg-light">
+                  <tr>
+                    <th>Feature</th>
+                    <th>Your Current System</th>
+                    <th>TasteIQ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Setup Time</td>
+                    <td>Days or Weeks</td>
+                    <td class="text-primary fw-bold">15 Minutes</td>
+                  </tr>
+                  <tr>
+                    <td>Separate Inventory System</td>
+                    <td>Extra Fee</td>
+                    <td class="text-primary fw-bold">Included</td>
+                  </tr>
+                  <tr>
+                    <td>Own Ordering Website</td>
+                    <td>Extra Fee</td>
+                    <td class="text-primary fw-bold">Included</td>
+                  </tr>
+                  <tr>
+                    <td>Multi-Outlet Management</td>
+                    <td>Complex & Expensive</td>
+                    <td class="text-primary fw-bold">Simple & Included</td>
+                  </tr>
+                  <tr>
+                    <td>Customer Support</td>
+                    <td>Limited Hours</td>
+                    <td class="text-primary fw-bold">24×7 Support</td>
+                  </tr>
+                  <tr>
+                    <td>Hidden Charges</td>
+                    <td>Yes</td>
+                    <td class="text-primary fw-bold">None</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 text-center p-4">
-            <div class="card-body">
-              <i class="bi bi-table feature-icon"></i>
-              <h3 class="card-title">Seamless Table Experience</h3>
-              <p class="card-text">Revolutionize dining with our digital menu and payment system. Let customers order and pay effortlessly from their table, enhancing their experience.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 text-center p-4">
-            <div class="card-body">
-              <i class="bi bi-bag-check feature-icon"></i>
-              <h3 class="card-title">Efficient Takeaway & Delivery</h3>
-              <p class="card-text">Optimize your off-premise business with our streamlined online ordering and quick fulfillment system. Satisfy customers beyond your dining room.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="text-center mt-5">
-        <a href="#features" class="btn btn-primary btn-lg">Explore All Features</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing Section -->
-  <section id="pricing" class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">Unbeatable Value for Your Business</h2>
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Happy restaurant owner" class="img-fluid rounded-3 shadow">
-        </div>
-        <div class="col-md-6">
-          <h3 class="mb-4">Switch & Save</h3>
-          <p class="lead">Already using paid software? Enjoy TasteIQ <strong class="text-primary">absolutely free</strong> until your current subscription expires!</p>
-          <p class="lead">After that, pay just <strong class="text-primary">70% of your existing cost</strong> for the entire first year.</p>
-          <p>We guarantee pricing that beats the competition, without compromising on quality or features.</p>
-          <a href="#contact" class="btn btn-primary btn-lg mt-3">Get Your Custom Quote</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Referral Program Section -->
-  <section id="referral" class="py-5 bg-primary-gradient text-white">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <h2 class="mb-4">Spread the Word, Earn Rewards</h2>
-          <p class="lead">Love TasteIQ? Share it with fellow restaurant owners and earn <strong>INR 1000</strong> for every successful referral!</p>
-          <p>Help us revolutionize dining experiences across your favorite places and be rewarded for your advocacy.</p>
-          <a href="#contact" class="btn btn-light btn-lg mt-3">Join Our Referral Program</a>
-        </div>
-        <div class="col-md-6">
-          <img src="https://images.unsplash.com/photo-1577415124269-fc1140a69e91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Referral program" class="img-fluid rounded-3 shadow">
         </div>
       </div>
     </div>
@@ -226,81 +491,521 @@
   <!-- Use Cases Section -->
   <section id="usecases" class="py-5">
     <div class="container">
-      <h2 class="text-center mb-5">TasteIQ: Versatile Solutions for Every Dining Experience</h2>
+      <h2 class="text-center mb-5">TasteIQ: Perfect for Every Food Business</h2>
       <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card h-100">
+        <div class="col-md-3">
+          <div class="card h-100 text-center p-4">
             <div class="card-body">
-              <h3 class="card-title">Self-POS System</h3>
-              <p class="card-text">Streamline operations, reduce wait times, and cut staffing costs with our intelligent self-service point of sale system.</p>
+              <i class="bi bi-cup-hot feature-icon"></i>
+              <h3 class="card-title">Cafés & Bakeries</h3>
+              <p class="card-text">Streamline quick-service operations and manage fresh inventory with ease.</p>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="card h-100">
+        <div class="col-md-3">
+          <div class="card h-100 text-center p-4">
             <div class="card-body">
-              <h3 class="card-title">Table & Counter Ordering</h3>
-              <p class="card-text">Enhance customer experience with seamless ordering, whether at the table or over the counter. Increase efficiency and satisfaction.</p>
+              <i class="bi bi-shop feature-icon"></i>
+              <h3 class="card-title">Full-Service Restaurants</h3>
+              <p class="card-text">Enhance tableside service and manage complex menus efficiently.</p>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="card h-100">
+        <div class="col-md-3">
+          <div class="card h-100 text-center p-4">
             <div class="card-body">
-              <h3 class="card-title">Takeaway & Delivery Services</h3>
-              <p class="card-text">Optimize your off-premise business with smooth order processing and efficient delivery management.</p>
+              <i class="bi bi-bag feature-icon"></i>
+              <h3 class="card-title">Cloud Kitchens</h3>
+              <p class="card-text">Optimize delivery operations and manage multiple brands seamlessly.</p>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="card h-100">
+        <div class="col-md-3">
+          <div class="card h-100 text-center p-4">
             <div class="card-body">
-              <h3 class="card-title">Versatile Dining Solutions</h3>
-              <p class="card-text">From cozy cafes to bustling bars, TasteIQ adapts to all types of dining establishments, enhancing operations across the board.</p>
+              <i class="bi bi-buildings feature-icon"></i>
+              <h3 class="card-title">Restaurant Chains</h3>
+              <p class="card-text">Manage multiple outlets with centralized control and consistent experience.</p>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Risk-Free Pricing -->
+  <section id="pricing" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-2">Switch with ZERO Risk, ZERO Upfront Cost</h2>
+      <p class="text-center lead mb-5">Our unique pricing model makes switching completely risk-free</p>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-5">
+          <div class="price-card shadow-sm mb-4 mb-lg-0">
+            <div class="price-badge">BEST VALUE</div>
+            <h3>TasteIQ Guarantee Plan</h3>
+            <div class="price-value">₹0</div>
+            <div class="price-period">Until your current subscription ends</div>
+            <hr>
+            <ul class="text-start list-unstyled feature-list">
+              <li><i class="bi bi-check-circle-fill"></i> Use 100% FREE alongside your current system</li>
+              <li><i class="bi bi-check-circle-fill"></i> Full access to ALL features</li>
+              <li><i class="bi bi-check-circle-fill"></i> 24×7 setup & support assistance</li>
+              <li><i class="bi bi-check-circle-fill"></i> After trial, pay 15% LESS than current provider</li>
+              <li><i class="bi bi-check-circle-fill"></i> Cancel anytime with no questions asked</li>
+              <li><i class="bi bi-check-circle-fill"></i> No long-term contract required</li>
+            </ul>
+            <div class="mt-4">
+              <a href="#contact" class="btn btn-primary btn-lg w-100">Switch Risk-Free Today</a>
+            </div>
+            <p class="mt-2 small text-muted">* Just show us your current provider's invoice</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-5">
+          <div class="contrast-box">
+            <h3 class="mb-3">What Our Customers Say About Pricing:</h3>
+            <div class="testimonial-card bg-white shadow-sm">
+              <p>"I was paying separately for POS, inventory, and an ordering website. TasteIQ gives me all these for LESS than what I paid just for POS before."</p>
+              <div class="d-flex align-items-center mt-3">
+                <strong>Rahul Sharma</strong>
+                <span class="ms-2 text-muted">Owner, Spice Garden</span>
+              </div>
+            </div>
+            <div class="mt-4">
+              <p><strong>TasteIQ Transparent Pricing:</strong></p>
+              <p>After your current subscription ends, choose from:</p>
+              <ul>
+                <li>Basic: 15% less than your current provider</li>
+                <li>Premium: At par with your current provider</li>
+                <li>Enterprise: Custom pricing for 5+ outlets</li>
+              </ul>
+              <p class="highlight-text">No setup fees. No hidden charges. No long-term contracts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-2">All-In-One Restaurant Management System</h2>
+      <p class="text-center lead mb-5">Everything you need to streamline operations and boost revenue</p>
+      
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <i class="bi bi-grid-3x3-gap feature-icon"></i>
+              <h3 class="card-title">Multi-Outlet Dashboard</h3>
+              <ul class="list-unstyled feature-list">
+                <li><i class="bi bi-check-circle-fill"></i> Manage all outlets from a single intelligent dashboard</li>
+                <li><i class="bi bi-check-circle-fill"></i> Add new outlets in minutes as you scale</li>
+                <li><i class="bi bi-check-circle-fill"></i> Access outlet-level reports and insights for smarter decisions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <i class="bi bi-lightning-charge feature-icon"></i>
+              <h3 class="card-title">Lightning-Fast Billing & KOT</h3>
+              <ul class="list-unstyled feature-list">
+                <li><i class="bi bi-check-circle-fill"></i> 3-click bill generation and Kitchen Order Ticket (KOT)</li>
+                <li><i class="bi bi-check-circle-fill"></i> Auto-generation of GST/TAX-compliant invoices</li>
+                <li><i class="bi bi-check-circle-fill"></i> Streamlined workflow between front-of-house and kitchen</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <i class="bi bi-globe feature-icon"></i>
+              <h3 class="card-title">Your Own Branded B2C Platform</h3>
+              <ul class="list-unstyled feature-list">
+                <li><i class="bi bi-check-circle-fill"></i> Custom-branded dine-in, takeaway, and delivery website</li>
+                <li><i class="bi bi-check-circle-fill"></i> Reduce aggregator dependency and commission costs</li>
+                <li><i class="bi bi-check-circle-fill"></i> Build direct relationships with your customers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <i class="bi bi-robot feature-icon"></i>
+              <h3 class="card-title">AI-Powered Setup & Smart Tools</h3>
+              <ul class="list-unstyled feature-list">
+                <li><i class="bi bi-check-circle-fill"></i> Upload menu image, go live in under 30 minutes</li>
+                <li><i class="bi bi-check-circle-fill"></i> AI detects pricing, categories, and dish details</li>
+                <li><i class="bi bi-check-circle-fill"></i> Coming soon: Auto inventory stacking via receipt uploads</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <i class="bi bi-box-seam feature-icon"></i>
+              <h3 class="card-title">Inventory & Menu Management</h3>
+              <ul class="list-unstyled feature-list">
+                <li><i class="bi bi-check-circle-fill"></i> Auto inventory deduction after orders</li>
+                <li><i class="bi bi-check-circle-fill"></i> Low stock & expiry alerts via email and dashboard</li>
+                <li><i class="bi bi-check-circle-fill"></i> Centralized menu updates across all outlets</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <i class="bi bi-cash-coin feature-icon"></i>
+              <h3 class="card-title">Counter Cash Management</h3>
+              <ul class="list-unstyled feature-list">
+                <li><i class="bi bi-check-circle-fill"></i> Track all cash payments and expenses in real time</li>
+                <li><i class="bi bi-check-circle-fill"></i> Ensure accountability for every rupee</li>
+                <li><i class="bi bi-check-circle-fill"></i> Prevent revenue leakages and cash mishandling</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="text-center mt-5">
-        <a href="#contact" class="btn btn-primary btn-lg">Discover Your Perfect Solution</a>
+        <a href="#contact" class="btn btn-primary btn-lg">Schedule a Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Restaurant Owners Who Made The Switch</h2>
+      
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 testimonial-card">
+            <p>"We were hesitant to switch systems after using our old POS for 5 years. TasteIQ's 15-minute setup and zero-risk trial convinced us. Now we're saving ₹12,000 monthly and managing operations much more efficiently."</p>
+            <div class="d-flex align-items-center mt-3">
+              <!-- <img src="/api/placeholder/60/60" alt="Restaurant owner" class="rounded-circle me-3"> -->
+              <div>
+                <h5 class="mb-0">Priya Patel</h5>
+                <p class="mb-0">Mumbai</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card h-100 testimonial-card">
+            <p>"The best thing about TasteIQ is having everything in one place. Before, we were juggling 3 different systems. Now it's all integrated, our staff learned it in one hour, and we're seeing 18% more direct orders through our branded website."</p>
+            <div class="d-flex align-items-center mt-3">
+              <!-- <img src="/api/placeholder/60/60" alt="Restaurant owner" class="rounded-circle me-3"> -->
+              <div>
+                <h5 class="mb-0">Vikram Singh</h5>
+                <p class="mb-0">Delhi</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card h-100 testimonial-card">
+            <p>"As a small café owner, I couldn't afford multiple expensive systems. TasteIQ's all-in-one solution at an affordable price was perfect. Setup was ridiculously fast - we uploaded our menu photo and were billing customers within 20 minutes!"</p>
+            <div class="d-flex align-items-center mt-3">
+              <!-- <img src="/api/placeholder/60/60" alt="Restaurant owner" class="rounded-circle me-3"> -->
+              <div>
+                <h5 class="mb-0">Aisha Khan</h5>
+                <p class="mb-0">Bangalore</p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-5">
+        <div class="col-lg-10 mx-auto">
+          <div class="card bg-primary-gradient text-white p-4">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h3>Join 500+ Restaurant Owners Who Switched to TasteIQ</h3>
+                <p class="mb-0">Experience the difference risk-free. Use TasteIQ alongside your current system at zero cost until your subscription ends.</p>
+              </div>
+              <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                <a href="#contact" class="btn btn-light">Get Started Today</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Switching Process Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Seamless Switching Process</h2>
+      
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="card p-4">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="step-card">
+                  <div class="step-number">1</div>
+                  <h5>Book a Demo</h5>
+                  <p>Schedule a 15-minute demo call with our restaurant specialist to see TasteIQ in action</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="step-card">
+                  <div class="step-number">2</div>
+                  <h5>Quick Setup</h5>
+                  <p>Upload your menu and complete the 15-minute setup with our guidance</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="step-card">
+                  <div class="step-number">3</div>
+                  <h5>Parallel Testing</h5>
+                  <p>Use TasteIQ alongside your current system at no cost until you're comfortable</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="step-card">
+                  <div class="step-number">4</div>
+                  <h5>Full Transition</h5>
+                  <p>When ready, complete the switch and enjoy 15% lower pricing than your previous provider</p>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-3">
+                <p class="mb-0">Our dedicated migration team will be with you every step of the way to ensure a smooth transition</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-5 bg-light">
+  <section id="contact" class="py-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6">
-          <h2 class="mb-4">Ready to Transform Your Restaurant?</h2>
-          <p class="lead">Take the first step towards revolutionizing your dining experience. Contact us today for a personalized demo and see TasteIQ in action!</p>
-          <ul class="list-unstyled">
-            <li><i class="bi bi-phone me-2"></i> +91 6207466460</li>
-            <li><i class="bi bi-geo-alt me-2"></i> Bangalore, India</li>
+          <h2 class="mb-4">Ready to Experience TasteIQ Risk-Free?</h2>
+          <p class="lead">Take the first step towards a more efficient, profitable restaurant operation. Remember:</p>
+          <ul class="feature-list mb-4">
+            <li><i class="bi bi-check-circle-fill"></i> <strong>Zero cost</strong> until your current subscription ends</li>
+            <li><i class="bi bi-check-circle-fill"></i> <strong>15-minute</strong> setup with our AI-powered system</li>
+            <li><i class="bi bi-check-circle-fill"></i> <strong>15% less</strong> than what you're currently paying</li>
+            <li><i class="bi bi-check-circle-fill"></i> <strong>All features included</strong> - no hidden charges</li>
           </ul>
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-phone-fill me-3 fs-4 text-primary"></i>
+            <div>
+              <h5 class="mb-0">Vidya Bhushan</h5>
+              <p class="mb-0">+91 6207466460</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <i class="bi bi-geo-alt-fill me-3 fs-4 text-primary"></i>
+            <p class="mb-0">Bangalore, India</p>
+          </div>
+          <div class="mt-4">
+            <div class="badge-special">Limited Time: Risk-Free Switch Offer!</div>
+          </div>
         </div>
         <div class="col-md-6">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                  <h3 class="card-title text-center mb-4">Get Your Free Demo</h3>
-                  <div class="google-form-container">
-                    <!-- Replace the src URL with your actual Google Form embed URL -->
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe459AK1RmAktW9G1l-sELXRG_DX_GkGhvdIDnK_CVKDSuilg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                  </div>
-                </div>
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title text-center mb-4">Book Your Free Demo</h3>
+              <div class="google-form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe459AK1RmAktW9G1l-sELXRG_DX_GkGhvdIDnK_CVKDSuilg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+      
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                  How exactly does the "free until my current subscription ends" offer work?
+                </button>
+              </h2>
+              <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Simply show us your current subscription invoice, and we'll let you use TasteIQ completely free until that subscription period ends. You can use both systems in parallel, ensuring a risk-free transition. When your current subscription ends, switch fully to TasteIQ and enjoy a 15% lower price than what you were paying.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                  Is the 15-minute setup really possible? What's involved?
+                </button>
+              </h2>
+              <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes! Our AI-powered system does the heavy lifting. Just upload photos of your existing menu, and our system automatically extracts all items, prices, and categories. Add basic restaurant information, and you're ready to start billing. We've designed the entire process to be completed in 15 minutes or less. For complex menus, our team can assist with any final adjustments.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                  Do I need to buy any special hardware to use TasteIQ?
+                </button>
+              </h2>
+              <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  No special hardware required! TasteIQ works on any existing tablet, smartphone, or computer. You can use your current devices and printers. Our system is cloud-based and works seamlessly across Android, iOS, Windows, and Mac devices. This saves you thousands in upfront hardware costs.
+                </div>
+              </div>
+            </div>
+            
+            
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                  Are there any hidden charges or add-on fees with TasteIQ?
+                </button>
+              </h2>
+              <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Absolutely not. Unlike other systems that charge extra for inventory management, online ordering, or multiple outlets, TasteIQ includes everything in one transparent subscription. There are no setup fees, no hidden charges, and no sudden price increases. What you see is what you pay - 15% less than your current provider.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-5 bg-primary-gradient text-white text-center">
+    <div class="container">
+      <h2 class="mb-4">Stop Overpaying for Restaurant Management Software</h2>
+      <p class="lead mb-4">Join hundreds of restaurant owners who've switched to TasteIQ and are saving time, money, and stress every day.</p>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card bg-white text-dark p-4 mb-4">
+            <div class="row align-items-center">
+              <div class="col-md-3 text-center text-md-start">
+                <span class="display-4 text-primary fw-bold">15%</span>
+              </div>
+              <div class="col-md-9 text-center text-md-start">
+                <h5>GUARANTEED SAVINGS</h5>
+                <p class="mb-0">Less than what you're currently paying, with more features included</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="tel:+916207466460" class="btn btn-light btn-lg me-3">Call Now: +91 6207466460</a>
+      <a href="#contact" class="btn btn-outline-light btn-lg">Book Your Free Demo</a>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-      <p>&copy; 2024 TasteIQ. Elevating dining experiences, one restaurant at a time.</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>TasteIQ</h5>
+          <p>The intelligent operating system for modern food businesses. Built by IIT & IIM founders who understand restaurants.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#quickstart" class="text-white">15-Min Setup</a></li>
+            <li><a href="#switch" class="text-white">Why Switch</a></li>
+            <li><a href="#pricing" class="text-white">Risk-Free Pricing</a></li>
+            <li><a href="#features" class="text-white">Features</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <p>Email: info@tasteiq.com<br>
+          Phone: +91 6207466460<br>
+          Address: Bangalore, India</p>
+        </div>
+      </div>
+      <hr class="mt-4 mb-4">
+      <div class="text-center">
+        <p>&copy; 2024 TasteIQ. All rights reserved.</p>
+      </div>
     </div>
   </footer>
-
+  <script> 
+    // Countdown Timer Script
+    document.addEventListener("DOMContentLoaded", function() {
+    // Set the end date for your limited time offer (YYYY, MM-1, DD, HH, MM, SS)
+    // Note: Months are 0-indexed in JavaScript (January = 0, December = 11)
+    const endDate = new Date(2025, 3, 27, 23, 59, 59).getTime();
+    
+    // Update the countdown every second
+    const countdownTimer = setInterval(function() {
+        // Get current date and time
+        const now = new Date().getTime();
+        
+        // Calculate the remaining time
+        const timeRemaining = endDate - now;
+        
+        // If the countdown is over, display zeros and stop the timer
+        if (timeRemaining < 0) {
+        clearInterval(countdownTimer);
+        document.querySelector(".countdown-timer .countdown-box:nth-child(1) .countdown-value").textContent = "00";
+        document.querySelector(".countdown-timer .countdown-box:nth-child(2) .countdown-value").textContent = "00";
+        document.querySelector(".countdown-timer .countdown-box:nth-child(3) .countdown-value").textContent = "00";
+        return;
+        }
+        
+        // Calculate days, hours, minutes
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        
+        // Add leading zeros for single digits
+        const formattedDays = days < 10 ? "0" + days : days;
+        const formattedHours = hours < 10 ? "0" + hours : hours;
+        const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+        
+        // Display the result in the countdown boxes
+        document.querySelector(".countdown-timer .countdown-box:nth-child(1) .countdown-value").textContent = formattedDays;
+        document.querySelector(".countdown-timer .countdown-box:nth-child(2) .countdown-value").textContent = formattedHours;
+        document.querySelector(".countdown-timer .countdown-box:nth-child(3) .countdown-value").textContent = formattedMinutes;
+        
+    }, 1000); // Update every second
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
