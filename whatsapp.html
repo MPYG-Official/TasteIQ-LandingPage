@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Booking Form</title>
+    <style>
+        .card-body {
+            padding: 2rem;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .card-title {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .demo-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .required {
+            color: #e74c3c;
+        }
+
+        .form-input {
+            padding: 12px 16px;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #fff;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .form-input:invalid {
+            border-color: #e74c3c;
+        }
+
+        .form-input:valid {
+            border-color: #27ae60;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: white;
+            border: none;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+            background: linear-gradient(135deg, #22c55e 0%, #16a085 100%);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .whatsapp-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .form-note {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            text-align: center;
+            margin-top: 1rem;
+            line-height: 1.4;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: center;
+            display: none;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .card-body {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+            
+            .card-title {
+                font-size: 1.5rem;
+            }
+            
+            .form-input {
+                padding: 10px 14px;
+            }
+            
+            .submit-btn {
+                padding: 14px 20px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Animation for form submission */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .submitting {
+            animation: pulse 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-body">
+        <h3 class="card-title">Book Your Free Demo</h3>
+        
+        <form class="demo-form" id="demoForm">
+            <div class="form-group">
+                <label class="form-label" for="name">
+                    Full Name <span class="required">*</span>
+                </label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    class="form-input" 
+                    required 
+                    placeholder="Enter your full name"
+                    minlength="2"
+                >
+                <div class="error-message" id="nameError">Please enter a valid name</div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="phone">
+                    Phone Number <span class="required">*</span>
+                </label>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    class="form-input" 
+                    required 
+                    placeholder="Enter your phone number"
+                    pattern="[0-9]{10}"
+                    title="Please enter a 10-digit phone number"
+                >
+                <div class="error-message" id="phoneError">Please enter a valid 10-digit phone number</div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="email">
+                    Email Address (Optional)
+                </label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    class="form-input" 
+                    placeholder="Enter your email address"
+                >
+                <div class="error-message" id="emailError">Please enter a valid email address</div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="city">
+                    City <span class="required">*</span>
+                </label>
+                <input 
+                    type="text" 
+                    id="city" 
+                    name="city" 
+                    class="form-input" 
+                    required 
+                    placeholder="Enter your city"
+                    minlength="2"
+                >
+                <div class="error-message" id="cityError">Please enter your city</div>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.485 3.485"/>
+                </svg>
+                Book Free Demo via WhatsApp
+            </button>
+
+            <div class="success-message" id="successMessage">
+                Form submitted successfully! Opening WhatsApp...
+            </div>
+        </form>
+
+        <p class="form-note">
+            🔒 Your information is secure and will only be used to contact you about your demo.
+            We'll connect with you via WhatsApp within 2 hours.
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('demoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name').trim();
+            const phone = formData.get('phone').trim();
+            const email = formData.get('email').trim();
+            const city = formData.get('city').trim();
+            
+            // Validate form
+            if (!validateForm(name, phone, email, city)) {
+                return;
+            }
+            
+            // Show submitting state
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.classList.add('submitting');
+            submitBtn.innerHTML = `
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.485 3.485"/>
+                </svg>
+                Opening WhatsApp...
+            `;
+            
+            // Create WhatsApp message
+            const message = createWhatsAppMessage(name, phone, email, city);
+            
+            // Create WhatsApp URL
+            const whatsappURL = `https://wa.me/916207466460?text=${encodeURIComponent(message)}`;
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Open WhatsApp after a short delay
+            setTimeout(() => {
+                window.open(whatsappURL, '_blank');
+                
+                // Reset form after successful submission
+                setTimeout(() => {
+                    this.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('submitting');
+                    submitBtn.innerHTML = `
+                        <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.485 3.485"/>
+                        </svg>
+                        Book Free Demo via WhatsApp
+                    `;
+                    document.getElementById('successMessage').style.display = 'none';
+                }, 3000);
+            }, 1000);
+            
+            // Track the conversion (if you have analytics)
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'demo_booking', {
+                    'event_category': 'engagement',
+                    'event_label': 'whatsapp_form_submission'
+                });
+            }
+        });
+
+        function validateForm(name, phone, email, city) {
+            let isValid = true;
+            
+            // Reset error messages
+            document.querySelectorAll('.error-message').forEach(el => el.style.display = 'none');
+            
+            // Validate name
+            if (!name || name.length < 2) {
+                document.getElementById('nameError').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate phone
+            const phoneRegex = /^[0-9]{10}$/;
+            if (!phone || !phoneRegex.test(phone)) {
+                document.getElementById('phoneError').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate email (if provided)
+            if (email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    document.getElementById('emailError').style.display = 'block';
+                    isValid = false;
+                }
+            }
+            
+            // Validate city
+            if (!city || city.length < 2) {
+                document.getElementById('cityError').style.display = 'block';
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+
+        function createWhatsAppMessage(name, phone, email, city) {
+            const currentDate = new Date().toLocaleDateString('en-IN');
+            const currentTime = new Date().toLocaleTimeString('en-IN');
+            
+            let message = `🎯 *NEW DEMO BOOKING REQUEST* 🎯\n\n`;
+            message += `📅 Date: ${currentDate}\n`;
+            message += `⏰ Time: ${currentTime}\n\n`;
+            message += `👤 *Customer Details:*\n`;
+            message += `• Name: ${name}\n`;
+            message += `• Phone: ${phone}\n`;
+            if (email) {
+                message += `• Email: ${email}\n`;
+            }
+            message += `• City: ${city}\n\n`;
+            message += `💡 *Request: FREE DEMO*\n\n`;
+            message += `Hi TasteIQ team! I'm interested in booking a free demo to learn more about your services. Please contact me to schedule a convenient time.\n\n`;
+            message += `Looking forward to enhancing my culinary experience with TasteIQ! 🍽️✨`;
+            
+            return message;
+        }
+
+        // Real-time validation feedback
+        document.getElementById('phone').addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);
+        });
+
+        document.getElementById('name').addEventListener('input', function() {
+            this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+        });
+    </script>
+</body>
+</html>

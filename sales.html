@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral and Sales Portal Wireframe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 1rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 0.5rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .field {
+            margin-bottom: 1rem;
+        }
+
+        .field label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .field input, .field select, .field textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .field textarea {
+            height: 100px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .card {
+            background: #f1f1f1;
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .button:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Referral and Sales Portal</h1>
+    </header>
+
+    <div class="container">
+
+        <section class="section">
+            <h2>Sales Partner Dashboard</h2>
+            <div class="dashboard-grid">
+                <div class="card">Total Leads</div>
+                <div class="card">Leads Converted</div>
+                <div class="card">Monthly Commissions</div>
+                <div class="card">Pending Conversions</div>
+                <div class="card">MOM Progress</div>
+                <div class="card">Notifications</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Lead Generation</h2>
+            <div class="field">
+                <label for="outletName">Outlet Name</label>
+                <input type="text" id="outletName" placeholder="Enter Outlet Name">
+            </div>
+            <div class="field">
+                <label for="ownerDetails">Owner Details</label>
+                <textarea id="ownerDetails" placeholder="Enter Owner Details"></textarea>
+            </div>
+            <div class="field">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="Enter Location">
+            </div>
+            <div class="field">
+                <label for="interestLevel">Interest Level</label>
+                <select id="interestLevel">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            <a href="#" class="button">Submit Lead</a>
+        </section>
+
+        <section class="section">
+            <h2>Training Resources</h2>
+            <ul>
+                <li><a href="#">Video Tutorials</a></li>
+                <li><a href="#">PDF Guides</a></li>
+                <li><a href="#">Case Studies</a></li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Admin Dashboard</h2>
+            <div class="dashboard-grid">
+                <div class="card">Total Revenue</div>
+                <div class="card">New Subscriptions</div>
+                <div class="card">Active Sales Partners</div>
+                <div class="card">Pending Leads</div>
+                <div class="card">Top Performers</div>
+                <div class="card">Monthly Reports</div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 TasteIQ. All rights reserved.</p>
+    </footer>
+</body>
+</html>
