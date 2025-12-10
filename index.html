@@ -607,6 +607,10 @@
                 <div class="countdown-value">32</div>
                 <div class="countdown-label">Mins</div>
               </div>
+              <div class="countdown-box">
+                <div class="countdown-value">00</div>
+                <div class="countdown-label">Secs</div>
+              </div>
             </div>
           </div>
           <div class="mt-4">
@@ -664,8 +668,8 @@
                 <p class="small">Minutes to Setup</p>
               </div>
               <div class="col-4">
-                <h3 class="text-primary">1</h3>
-                <p class="small">Hour Staff Training</p>
+                <h3 class="text-primary">30</h3>
+                <p class="small">Mins Staff Training</p>
               </div>
               <div class="col-4">
                 <h3 class="text-primary">0</h3>
@@ -1544,23 +1548,27 @@ document.getElementById('demoForm').addEventListener('submit', function(e) {
         document.querySelector(".countdown-timer .countdown-box:nth-child(1) .countdown-value").textContent = "00";
         document.querySelector(".countdown-timer .countdown-box:nth-child(2) .countdown-value").textContent = "00";
         document.querySelector(".countdown-timer .countdown-box:nth-child(3) .countdown-value").textContent = "00";
+        document.querySelector(".countdown-timer .countdown-box:nth-child(4) .countdown-value").textContent = "00";
         return;
         }
         
-        // Calculate days, hours, minutes
+        // Calculate days, hours, minutes, seconds
         const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
         
         // Add leading zeros for single digits
         const formattedDays = days < 10 ? "0" + days : days;
         const formattedHours = hours < 10 ? "0" + hours : hours;
         const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+        const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
         
         // Display the result in the countdown boxes
         document.querySelector(".countdown-timer .countdown-box:nth-child(1) .countdown-value").textContent = formattedDays;
         document.querySelector(".countdown-timer .countdown-box:nth-child(2) .countdown-value").textContent = formattedHours;
         document.querySelector(".countdown-timer .countdown-box:nth-child(3) .countdown-value").textContent = formattedMinutes;
+        document.querySelector(".countdown-timer .countdown-box:nth-child(4) .countdown-value").textContent = formattedSeconds;
         
     }, 1000); // Update every second
     });
