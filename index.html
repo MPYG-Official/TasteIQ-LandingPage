@@ -12,16 +12,33 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      color: #333;
+      color: #1f2937;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(110, 72, 170, 0.12), transparent 45%),
+        radial-gradient(circle at 85% 0%, rgba(157, 80, 187, 0.12), transparent 45%),
+        #f6f7fb;
+      -webkit-font-smoothing: antialiased;
     }
     
     .bg-primary-gradient {
       background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
     }
+
+    h1, h2, h3, h4, h5 {
+      letter-spacing: -0.015em;
+    }
+
+    .btn-outline-light {
+      border-width: 2px;
+      box-shadow: 0 10px 24px rgba(255, 255, 255, 0.1);
+    }
     
     .navbar {
-      background-color: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 10px 30px rgba(16, 24, 40, 0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
     
     .navbar-brand {
@@ -40,28 +57,32 @@
     }
     
     .btn-primary {
-      background-color: #6e48aa;
-      border-color: #6e48aa;
+      background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+      border-color: transparent;
+      box-shadow: 0 10px 24px rgba(110, 72, 170, 0.25);
       transition: all 0.3s ease;
     }
     
     .btn-primary:hover {
-      background-color: #9d50bb;
-      border-color: #9d50bb;
+      background: linear-gradient(135deg, #7f56d9 0%, #b35ce5 100%);
+      border-color: transparent;
       transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 14px 28px rgba(110, 72, 170, 0.3);
     }
     
-    .card {
-      border: none;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    .card:not(.bg-primary-gradient) {
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 16px 40px rgba(16, 24, 40, 0.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       transition: all 0.3s ease;
     }
     
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 20px 50px rgba(16, 24, 40, 0.16);
     }
     
     .feature-icon {
@@ -88,7 +109,7 @@
     }
     
     #hero {
-      background: url('https://images.unsplash.com/photo-1508424757105-b6d5ad9329d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1592861956120-e524fc739696?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       padding: 120px 0;
       position: relative;
     }
@@ -100,7 +121,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
+      background: linear-gradient(180deg, rgba(8, 10, 20, 0.7) 0%, rgba(8, 10, 20, 0.55) 100%);
     }
     
     #hero .container {
@@ -110,8 +131,34 @@
     
     .text-gradient {
       background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+
+    .hero-panel {
+      background: rgba(10, 12, 24, 0.42);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 24px;
+      padding: 36px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-panel .btn-outline-light {
+      border-color: rgba(255, 255, 255, 0.65);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .hero-actions .btn {
+      min-width: 220px;
     }
     
     .feature-list li {
@@ -145,7 +192,7 @@
     }
     
     .badge-special {
-      background-color: #ff4081;
+      background: linear-gradient(135deg, #ff4081 0%, #ff6fa3 100%);
       color: white;
       padding: 5px 10px;
       border-radius: 20px;
@@ -153,6 +200,7 @@
       font-weight: 600;
       display: inline-block;
       margin-bottom: 10px;
+      box-shadow: 0 10px 20px rgba(255, 64, 129, 0.25);
     }
     
     .team-badge {
@@ -189,7 +237,7 @@
       top: 0;
       width: 60px;
       height: 60px;
-      background-color: #6e48aa;
+      background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
       color: white;
       font-size: 1.2rem;
       font-weight: 600;
@@ -197,17 +245,29 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      box-shadow: 0 10px 20px rgba(110, 72, 170, 0.25);
     }
     
     .switch-card {
       border-left: 4px solid #6e48aa;
       padding: 20px;
       margin-bottom: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(16, 24, 40, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
     
     .testimonial-card {
       padding: 25px;
       position: relative;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 18px;
+      box-shadow: 0 16px 40px rgba(16, 24, 40, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
     
     .testimonial-card:before {
@@ -222,9 +282,14 @@
     .price-card {
       text-align: center;
       padding: 30px;
-      border-radius: 15px;
+      border-radius: 20px;
       position: relative;
       overflow: hidden;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 18px 45px rgba(16, 24, 40, 0.14);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
     
     .price-badge {
@@ -250,10 +315,14 @@
     }
     
     .contrast-box {
-      background-color: #f8f9fa;
-      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 18px;
       padding: 25px;
       margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 16px 40px rgba(16, 24, 40, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
     
     .highlight-text {
@@ -269,12 +338,44 @@
     }
     
     .countdown-box {
-      background-color: #6e48aa;
+      background: rgba(255, 255, 255, 0.16);
       color: white;
       padding: 10px;
-      border-radius: 8px;
+      border-radius: 10px;
       width: 60px;
       text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .timer-box {
+      background-color: rgba(12, 12, 22, 0.6);
+      border-radius: 12px;
+      padding: 10px 15px;
+      margin-top: 15px;
+      display: inline-block;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .bg-light {
+      background-color: #f4f6fb !important;
+    }
+
+    .table {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .table thead {
+      background: rgba(110, 72, 170, 0.08);
+    }
+
+    .table-bordered > :not(caption) > * {
+      border-color: rgba(110, 72, 170, 0.15);
     }
     
     .countdown-value {
@@ -404,12 +505,23 @@
         }
         .card-body-whatsapp-form {
             padding: 2rem;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            box-shadow: 0 16px 40px rgba(16, 24, 40, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.7);
             max-width: 500px;
             margin: 0 auto;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .accordion-item {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 14px;
+            box-shadow: 0 12px 30px rgba(16, 24, 40, 0.1);
+            overflow: hidden;
         }
 
         .card-title {
@@ -588,8 +700,8 @@
   <section id="hero" class="text-white text-center d-flex align-items-center">
     <div class="container">
       <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <div class="badge-special mb-3">Trusted by 500+ Profitable Restaurant Owners</div>
+        <div class="col-lg-10 mx-auto hero-panel">
+          <div class="badge-special mb-3">Trusted by 5000+ Profitable Restaurant Owners</div>
           <h1 class="display-4 fw-bold mb-3">Switch to TasteIQ POS in 15 Minutes</h1>
           <p class="lead mb-2">TasteIQ empowers restaurants to scale effortlessly, operate efficiently, and delight customers consistently - all from a single intelligent platform with ZERO risk and 14 day free trial.</p>
           <div class="timer-box">
@@ -613,8 +725,8 @@
               </div>
             </div>
           </div>
-          <div class="mt-4">
-            <a href="#contact" class="btn btn-primary btn-lg" style="margin-bottom: 1px;">
+          <div class="mt-4 hero-actions">
+            <a href="#contact" class="btn btn-primary btn-lg">
               <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.485 3.485"/>
             </svg>
@@ -636,16 +748,19 @@
           <h2 class="mb-4">Setup Your Restaurant in Just 15 Minutes</h2>
           <p class="lead">No lengthy onboarding. No complicated training. Get your entire restaurant system running in minutes, not weeks.</p>
           
+         
+          
           <div class="step-card">
             <div class="step-number">1</div>
-            <h3>Upload Your Menu</h3>
-            <p>Simply take a photo of your menu or upload existing menu images. Our AI instantly extracts all items, prices, and categories.</p>
+            <h3>Enter Basic Information</h3>
+            <p>Add your restaurant name, address, and tax details. Choose your preferred themes and colors to match your brand.</p>
           </div>
+
           
           <div class="step-card">
             <div class="step-number">2</div>
-            <h3>Enter Basic Information</h3>
-            <p>Add your restaurant name, address, and tax details. Choose your preferred themes and colors to match your brand.</p>
+            <h3>Upload Your Menu</h3>
+            <p>Simply take a photo of your menu or upload existing menu images. Our AI instantly extracts all items, prices, and categories.</p>
           </div>
           
           <div class="step-card">
@@ -661,7 +776,7 @@
         </div>
         <div class="col-lg-6">
           <div class="card shadow p-3">
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Restaurant setup" class="img-fluid rounded-3 mb-3">
+            <img src="https://images.pexels.com/photos/12935088/pexels-photo-12935088.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Cafe service with tablet ordering" class="img-fluid rounded-3 mb-3">
             <div class="row text-center">
               <div class="col-4">
                 <h3 class="text-primary">15</h3>
@@ -1022,7 +1137,7 @@
           <div class="card bg-primary-gradient text-white p-4">
             <div class="row align-items-center">
               <div class="col-md-8">
-                <h3>Join 500+ Restaurant Owners Who Switched to TasteIQ</h3>
+                <h3>Join 5000+ Restaurant Owners Who Switched to TasteIQ</h3>
                 <p class="mb-0">Experience the difference risk-free. Use TasteIQ alongside your current system at zero cost until your subscription ends.</p>
               </div>
               <div class="col-md-4 text-md-end mt-3 mt-md-0">
