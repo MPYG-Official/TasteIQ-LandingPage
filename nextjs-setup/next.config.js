@@ -6,11 +6,21 @@ const withMDX = require('@next/mdx')({
   },
 });
 
+/** Root for tasteiq.in (empty). Set GITHUB_PAGES_PREVIEW=1 only for github.io subpath previews. */
+const basePath =
+  process.env.NEXT_PUBLIC_BASE_PATH !== undefined
+    ? process.env.NEXT_PUBLIC_BASE_PATH
+    : process.env.GITHUB_PAGES_PREVIEW === '1'
+      ? '/TasteIQ-LandingPage'
+      : '';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
   output: 'export',
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : undefined,
   trailingSlash: false,
   images: {
     unoptimized: true,

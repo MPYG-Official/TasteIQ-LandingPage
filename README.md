@@ -33,7 +33,9 @@ See [nextjs-setup/STATIC_EXPORT.md](nextjs-setup/STATIC_EXPORT.md) for redirects
 ## GitHub Pages
 
 1. Push to `main` — the workflow runs automatically.
-2. In the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-3. Custom domain `tasteiq.in` is set via `nextjs-setup/public/CNAME` (included in each deploy).
+2. **Settings → Pages → Source: GitHub Actions**, then set **Custom domain** to `tasteiq.in` (see [DEPLOY_DNS.md](nextjs-setup/DEPLOY_DNS.md)).
+3. Live site: **https://tasteiq.in** (not the bare `github.io` subpath — that URL does not load CSS unless you use a preview build).
+
+**If the site has no styles or tasteiq.in 404:** follow [nextjs-setup/DEPLOY_DNS.md](nextjs-setup/DEPLOY_DNS.md).
 
 Affiliate and Foods apps are hosted separately at [foods.tasteiq.in](https://foods.tasteiq.in).

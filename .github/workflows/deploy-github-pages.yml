@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -35,19 +38,22 @@ jobs:
         working-directory: nextjs-setup
         run: npm ci
 
-      - name: Build static site
+      - name: Build static site (custom domain at root)
         working-directory: nextjs-setup
         env:
           NEXT_PUBLIC_SITE_URL: https://tasteiq.in
+          NEXT_PUBLIC_BASE_PATH: ''
           STATIC_EXPORT: '1'
           SKIP_DATABASE: '1'
         run: npm run build:static
 
-      - name: Verify build output
+      - name: Prepare artifact (CNAME + Jekyll bypass)
         run: |
+          echo "tasteiq.in" > nextjs-setup/out/CNAME
+          touch nextjs-setup/out/.nojekyll
           test -f nextjs-setup/out/index.html
-          test -f nextjs-setup/out/CNAME
-          test -f nextjs-setup/out/.nojekyll || touch nextjs-setup/out/.nojekyll
+          ls nextjs-setup/out/_next/static/css/*.css >/dev/null
+          head -1 nextjs-setup/out/CNAME
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
