@@ -1,0 +1,18 @@
+@import '../food-brand/affiliate.css';
+
+.fnb-site {
+  background: var(--fb-cream);
+}
+
+.fnb-site .fnb-logo-header {
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+
+.fnb-site .product-site {
+  background: transparent;
+}
+
+.prototype-site .fnb-site .phero {
+  padding-top: 40px;
+}

@@ -1,0 +1,52 @@
+/* TasteIQ wordmark lockup — shared across Hotels, F&B, Food, Vision */
+.fb-brand-logo {
+  --fb-ink: #1a1a1a;
+  --fb-accent: #b5482b;
+  --fb-cream-on-dark: #f4eee4;
+  --fb-display: var(--font-inter-tight), 'Inter Tight', system-ui, sans-serif;
+}
+
+.fb-brand-logo .fb-logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  line-height: 1;
+}
+
+.fb-brand-logo .fb-logo-word {
+  font-family: var(--fb-display);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  text-transform: lowercase;
+  color: var(--fb-ink);
+}
+
+.fb-brand-logo .fb-logo-dot {
+  color: var(--fb-accent);
+}
+
+.fb-brand-logo .fb-logo-suffix {
+  font-family: var(--fb-display);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--fb-ink);
+  margin-left: 1px;
+}
+
+.fb-brand-logo.is-on-dark .fb-logo-word,
+.fb-brand-logo.is-on-dark .fb-logo-suffix {
+  color: var(--fb-cream-on-dark);
+}
+
+.fb-brand-logo.is-hero .fb-logo-word {
+  font-size: clamp(26px, 4.5vw, 36px);
+}
+
+.fb-brand-logo.is-hero .fb-logo-suffix {
+  font-size: 11px;
+  letter-spacing: 0.42em;
+}

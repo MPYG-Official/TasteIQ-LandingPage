@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  description String
+  content     String   @db.Text
+  excerpt     String?
+  author      String   @default("TasteIQ Team")
+  category    String
+  tags        String[]
+  image       String?
+  featured    Boolean  @default(false)
+  published   Boolean  @default(false)
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  seoTitle    String?
+  seoDescription String?
+  seoKeywords String[]
+  readTime    Int      @default(5) // in minutes
+  views       Int      @default(0)
+
+  @@index([slug])
+  @@index([category])
+  @@index([published, publishedAt])
+  @@map("blog_posts")
+}
+
+model SEOContent {
+  id          String   @id @default(cuid())
+  page        String   @unique // e.g., "home", "pricing", "features"
+  title       String
+  description String
+  keywords    String[]
+  ogImage     String?
+  structuredData Json? // JSON-LD structured data
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([page])
+  @@map("seo_content")
+}
+
+model BlogCategory {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  slug        String   @unique
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("blog_categories")
+}
+

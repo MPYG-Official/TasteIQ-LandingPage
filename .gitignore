@@ -1,0 +1,41 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Next.js (source lives in nextjs-setup/)
+nextjs-setup/node_modules/
+nextjs-setup/.next/
+nextjs-setup/out/
+
+# Local static export at repo root (CI builds to nextjs-setup/out — do not commit)
+/_next/
+/.nojekyll
+/404.html
+/opengraph-image/
+/affiliate/
+/blog/
+/fnb/
+/foods/
+/hotels/
+/product/
+/vision/
+/food-brand/
+/prototype/
+*.html
+*.txt
+!/nextjs-setup/**/*.html
+/robots.txt
+/sitemap.xml
+
+# Prototypes & docs (not deployed)
+/Protoype-UI/
+/tasteiq (3)/
+
+# Misc local
+*.log
+.npm-cache/

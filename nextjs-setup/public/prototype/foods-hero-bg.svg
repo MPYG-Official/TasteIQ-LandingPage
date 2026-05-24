@@ -1,0 +1,79 @@
+    <svg viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <symbol id="f-bowl" viewBox="0 0 40 40">
+          <path d="M5 16 H35 L31 32 Q29 36 20 36 Q11 36 9 32 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none"/>
+          <line x1="5" y1="20" x2="35" y2="20" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M14 8 Q12 4 14 1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+          <path d="M20 7 Q22 3 20 0" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+        </symbol>
+        <symbol id="f-cup" viewBox="0 0 40 40">
+          <path d="M10 13 H29 L27 32 Q26 36 20 36 Q14 36 13 32 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none"/>
+          <path d="M29 17 Q35 18 34 24 Q33 28 28 27" stroke="currentColor" stroke-width="1.6" fill="none"/>
+        </symbol>
+        <symbol id="f-qr" viewBox="0 0 40 40">
+          <rect x="5"  y="5"  width="11" height="11" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <rect x="8.5" y="8.5" width="4" height="4" fill="currentColor"/>
+          <rect x="24" y="5"  width="11" height="11" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <rect x="27.5" y="8.5" width="4" height="4" fill="currentColor"/>
+          <rect x="5"  y="24" width="11" height="11" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <rect x="8.5" y="27.5" width="4" height="4" fill="currentColor"/>
+          <rect x="21" y="21" width="3" height="3" fill="currentColor"/>
+          <rect x="26" y="21" width="3" height="3" fill="currentColor"/>
+          <rect x="21" y="26" width="3" height="3" fill="currentColor"/>
+          <rect x="31" y="31" width="3" height="3" fill="currentColor"/>
+        </symbol>
+        <symbol id="f-box" viewBox="0 0 40 40">
+          <rect x="6" y="14" width="28" height="20" rx="2" stroke="currentColor" stroke-width="1.6" fill="none"/>
+          <path d="M6 22 H34" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M16 14 V8 Q16 6 18 6 H22 Q24 6 24 8 V14" stroke="currentColor" stroke-width="1.4" fill="none"/>
+        </symbol>
+        <symbol id="f-fnk" viewBox="0 0 40 40">
+          <line x1="14" y1="6"  x2="14" y2="34" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="11" y1="6"  x2="11" y2="14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="17" y1="6"  x2="17" y2="14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M22 6 Q22 14 26 16 V34" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          <path d="M30 6 Q30 14 26 16" stroke="currentColor" stroke-width="1.4" fill="none"/>
+        </symbol>
+        <symbol id="f-bike" viewBox="0 0 40 40">
+          <circle cx="9" cy="28" r="5" stroke="currentColor" stroke-width="1.6" fill="none"/>
+          <circle cx="31" cy="28" r="5" stroke="currentColor" stroke-width="1.6" fill="none"/>
+          <path d="M9 28 L18 14 L24 14 L31 28" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none"/>
+          <rect x="15" y="9" width="10" height="5" rx="1" stroke="currentColor" stroke-width="1.4" fill="none"/>
+        </symbol>
+        <symbol id="f-bldg" viewBox="0 0 40 40">
+          <path d="M8 36 V14 L20 6 L32 14 V36 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+          <rect x="13" y="20" width="4" height="5" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <rect x="23" y="20" width="4" height="5" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <rect x="17" y="28" width="6" height="8" stroke="currentColor" stroke-width="1.2" fill="none"/>
+        </symbol>
+      </defs>
+      <g color="#A33E25">
+        <use href="#f-bldg"  x="80"   y="80"  width="40" height="40"/>
+        <use href="#f-qr"    x="220"  y="160" width="36" height="36"/>
+        <use href="#f-bowl"  x="360"  y="100" width="36" height="36"/>
+        <use href="#f-cup"   x="500"  y="200" width="34" height="34"/>
+        <use href="#f-bike"  x="650"  y="120" width="40" height="40"/>
+        <use href="#f-box"   x="800"  y="180" width="36" height="36"/>
+        <use href="#f-fnk"   x="940"  y="100" width="34" height="34"/>
+        <use href="#f-bowl"  x="1080" y="180" width="36" height="36"/>
+        <use href="#f-bldg"  x="1220" y="90"  width="40" height="40"/>
+        <use href="#f-qr"    x="1380" y="180" width="36" height="36"/>
+        <use href="#f-cup"   x="150"  y="320" width="34" height="34"/>
+        <use href="#f-box"   x="320"  y="380" width="38" height="38"/>
+        <use href="#f-bike"  x="480"  y="350" width="42" height="42"/>
+        <use href="#f-bowl"  x="680"  y="400" width="38" height="38"/>
+        <use href="#f-fnk"   x="860"  y="340" width="34" height="34"/>
+        <use href="#f-qr"    x="1020" y="400" width="36" height="36"/>
+        <use href="#f-bldg"  x="1180" y="360" width="40" height="40"/>
+        <use href="#f-cup"   x="1340" y="400" width="34" height="34"/>
+        <use href="#f-bowl"  x="60"   y="500" width="38" height="38"/>
+        <use href="#f-box"   x="240"  y="540" width="38" height="38"/>
+        <use href="#f-bike"  x="420"  y="520" width="42" height="42"/>
+        <use href="#f-fnk"   x="600"  y="560" width="34" height="34"/>
+        <use href="#f-qr"    x="780"  y="520" width="36" height="36"/>
+        <use href="#f-bowl"  x="940"  y="560" width="38" height="38"/>
+        <use href="#f-bldg"  x="1120" y="540" width="40" height="40"/>
+        <use href="#f-cup"   x="1300" y="560" width="34" height="34"/>
+        <use href="#f-box"   x="1460" y="510" width="38" height="38"/>
+      </g>
+    </svg>
