@@ -2,7 +2,7 @@ name: Deploy GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [backup-branch]
     paths:
       - 'nextjs-setup/**'
       - '.github/workflows/deploy-github-pages.yml'
