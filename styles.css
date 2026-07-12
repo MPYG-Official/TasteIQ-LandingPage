@@ -1,65 +1,209 @@
-/* General Body Styling */
+:root {
+    --primary: #6e48aa;
+    --primary-dark: #5b3e92;
+    --primary-soft: #f3efff;
+    --surface: #ffffff;
+    --surface-soft: #f8f7ff;
+    --text: #1f2937;
+    --muted: #475569;
+    --border: rgba(15, 23, 42, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: #f6f7fb;
     line-height: 1.6;
+    min-height: 100%;
+    padding-top: 80px;
 }
 
-/* Header */
-header {
-    background: #343a40;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* Hero Section */
-#hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    height: 100vh;
-    color: #fff;
-    text-align: left;
-    padding: 100px 0;
+a {
+    color: var(--primary);
+    text-decoration: none;
 }
 
-#hero h2 {
-    font-size: 3rem;
-    font-weight: bold;
+a:hover {
+    text-decoration: none;
 }
 
-#hero p {
-    font-size: 1.2rem;
+.navbar {
+    background-color: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
 }
 
-/* Features Section */
-#features .card {
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary) !important;
 }
 
-#features .card:hover {
-    transform: scale(1.05);
+.navbar .nav-link {
+    color: #334155 !important;
+    font-weight: 500;
 }
 
-/* Use Cases List */
-#usecases .list-group-item {
-    font-size: 1.1rem;
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--primary) !important;
 }
 
-/* Contact Form */
-#contact form input,
-#contact form textarea {
-    border-radius: 0;
-    border: 2px solid #e9ecef;
-    margin-bottom: 1rem;
+.hero-panel,
+.page-panel,
+.content-card,
+.card {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.09);
 }
 
-#contact form button {
-    border-radius: 0;
-    background: #007bff;
+.hero-panel {
+    padding: 40px;
+}
+
+.bg-primary-gradient,
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, #9d50bb 100%);
+    border-color: transparent;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: linear-gradient(135deg, #7f56d9 0%, #b35ce5 100%);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background: var(--primary);
     color: white;
 }
 
-/* Footer */
-footer {
-    background: #343a40;
-    color: #fff;
+.section {
+    padding: 60px 0;
+}
+
+.section h2,
+.section h1,
+.section h3 {
+    color: var(--text);
+}
+
+.section-title {
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    color: var(--muted);
+    margin-bottom: 2rem;
+}
+
+.page-header {
+    padding: 70px 0 50px;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 1;
+}
+
+.page-footer,
+.footer {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 40px 0;
+}
+
+.page-footer a,
+.footer a {
+    color: #c7d2fe;
+}
+
+.page-footer a:hover,
+.footer a:hover {
+    color: white;
+}
+
+.card,
+.content-card {
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.card-title,
+.content-card h2,
+.content-card h3 {
+    color: var(--primary);
+}
+
+.feature-list li,
+.policy-list li {
+    margin-bottom: 0.8rem;
+}
+
+.policy-list {
+    padding-left: 1rem;
+}
+
+.page-heading {
+    font-size: clamp(2rem, 2.2vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.page-intro {
+    max-width: 780px;
+    color: var(--muted);
+}
+
+.badge-special {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ff4081 0%, #ff6fa3 100%);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.footer {
     text-align: center;
+}
+
+@media (max-width: 991px) {
+    body {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 120px;
+    }
+
+    .hero-panel,
+    .page-panel,
+    .content-card,
+    .card {
+        border-radius: 16px;
+    }
 }
