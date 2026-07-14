@@ -1,140 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TasteIQ - Pricing Plans</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .pricing-card {
-            transition: transform 0.3s ease;
-        }
-        .pricing-card:hover {
-            transform: translateY(-5px);
-        }
-        .toggle-checkbox:checked {
-            right: 0;
-            border-color: #4F46E5;
-        }
-        .toggle-checkbox:checked + .toggle-label {
-            background-color: #4F46E5;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TasteIQ Pricing | Plans for Restaurants, Cafés &amp; Hotels</title>
+  <meta name="description" content="TasteIQ pricing: switch risk-free at ₹0 until your current POS ends, then Lite, Pro, or Elite annual plans. Transparent plans for restaurants, cafés, and hotel F&amp;B worldwide—INR and USD.">
+  <link rel="canonical" href="https://tasteiq.in/pricing.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tasteiq.in/pricing.html">
+  <meta property="og:title" content="TasteIQ Pricing | Transparent Restaurant &amp; Hotel POS Plans">
+  <meta property="og:description" content="Zero-risk switch guarantee plus Lite, Pro, and Elite annual plans for food businesses and hotel properties worldwide.">
+  <meta property="og:site_name" content="TasteIQ">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "TasteIQ Pricing",
+    "url": "https://tasteiq.in/pricing.html",
+    "description": "Transparent TasteIQ pricing for restaurants, cafés, and hotel F&B—risk-free switch plus annual plans.",
+    "isPartOf": { "@type": "WebSite", "url": "https://tasteiq.in/" }
+  }
+  </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">TasteIQ</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html#pricing">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sales-partner.html">Partners</a></li>
-                    <li class="nav-item"><a class="nav-link" href="whatsapp.html">Book Demo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
-                    <li class="nav-item"><a class="nav-link" href="privacy-policy.html">Privacy</a></li>
-                </ul>
-            </div>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container navbar-shell">
+      <a class="navbar-brand" href="index.html">TasteIQ</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav class="audience-switch" aria-label="Choose your business type">
+        <a class="audience-switch__link" href="index.html"><span class="as-full">Restaurants &amp; Cafés</span><span class="as-short">Restaurants</span></a>
+        <a class="audience-switch__link" href="hotels.html"><span class="as-full">Hotels &amp; Properties</span><span class="as-short">Hotels</span></a>
+      </nav>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="pricing.html" aria-current="page">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="sales-partner.html">Partners</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Book Demo</a></li>
+          <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="subpage-hero">
+      <div class="container">
+        <span class="section-eyebrow">Pricing</span>
+        <h1>Simple, transparent plans</h1>
+        <p class="lead">Start with our zero-risk switch guarantee—then pick an annual plan that fits restaurants, cafés, or hotel F&amp;B outlets. No setup fees. No surprise add-ons.</p>
+        <div class="currency-toggle" role="group" aria-label="Currency">
+          <span id="labelInr" class="is-on">INR</span>
+          <input type="checkbox" id="currencyToggle" aria-label="Toggle USD pricing">
+          <span id="labelUsd">USD</span>
         </div>
-    </nav>
+      </div>
+    </section>
 
-    <main class="pricing-page">
-        <section class="pricing-hero text-center">
-            <div class="container">
-                <h1>Simple, Transparent Pricing</h1>
-                <p>Choose the perfect plan for your restaurant.</p>
-                <div class="pricing-toggle">
-                    <span>INR</span>
-                    <label class="toggle-switch">
-                        <input type="checkbox" id="currencyToggle">
-                        <span class="toggle-slider"></span>
-                    </label>
-                    <span>USD</span>
-                </div>
+    <section class="section-pad pt-0">
+      <div class="container">
+        <div class="guarantee-banner">
+          <div class="guarantee-card">
+            <span class="badge-special mb-3">Best value</span>
+            <h2>TasteIQ Guarantee Plan</h2>
+            <p class="mb-0 opacity-90">Use TasteIQ free until your current subscription ends—then pay 15% less than your current provider.</p>
+            <div class="price-lg">₹0 / $0</div>
+            <p class="small opacity-85 mb-0">Until your current POS or F&amp;B software subscription ends</p>
+            <ul>
+              <li>✓ Full access while you run systems in parallel</li>
+              <li>✓ 24×7 setup &amp; migration support</li>
+              <li>✓ Cancel anytime · No long-term lock-in</li>
+              <li>✓ Works for restaurants, cafés &amp; hotel outlets</li>
+            </ul>
+            <a href="index.html#contact" class="btn btn-light btn-lg">Switch risk-free</a>
+          </div>
+          <div class="guarantee-side">
+            <h3 class="h5 mb-3">After your current plan ends</h3>
+            <p class="text-muted mb-3">Choose the annual tier that matches your volume. Core billing, KOT, inventory, and multi-outlet tools are included—no nickel-and-dime add-ons for essentials.</p>
+            <ul class="list-unstyled feature-list mb-4">
+              <li><i class="bi bi-check-circle-fill"></i> Lite — growing single outlets</li>
+              <li><i class="bi bi-check-circle-fill"></i> Pro — busy kitchens &amp; multi-channel ordering</li>
+              <li><i class="bi bi-check-circle-fill"></i> Elite — chains, hotels &amp; portfolios</li>
+            </ul>
+            <p class="small text-muted mb-0">Need custom enterprise pricing? <a href="index.html#contact">Talk to us</a> or become a <a href="sales-partner.html">sales partner</a>.</p>
+          </div>
+        </div>
+
+        <div class="text-center mb-4">
+          <span class="section-eyebrow">Annual plans</span>
+          <h2 class="mb-2">Pick a plan that scales with you</h2>
+          <p class="section-subtitle mx-auto mb-0">Billed yearly. Secure payments. Same guarantee: core features included.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <h2 class="pricing-plan-name">TasteIQ Lite</h2>
+            <p class="small text-muted mb-0">For cafés &amp; single restaurants</p>
+            <div class="pricing-price">
+              <span class="amount price-inr">₹6,000</span>
+              <span class="amount price-usd hidden">$72</span>
+              <span class="unit">/year</span>
             </div>
-        </section>
+            <ul class="plan-features">
+              <li>POS billing &amp; basic analytics</li>
+              <li>Menu management</li>
+              <li>Up to 1,000 orders/month</li>
+              <li>Email support</li>
+            </ul>
+            <a href="index.html#contact" class="btn btn-outline-primary">Get started</a>
+          </article>
 
-        <section class="pricing-plans section">
-            <div class="container">
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <div class="plan-header text-center">
-                            <h2 class="pricing-plan-name">TasteIQ Lite</h2>
-                            <div class="pricing-price">
-                                <span class="price-inr">₹6,000</span>
-                                <span class="price-usd hidden">$72</span>
-                                <span class="unit">/year</span>
-                            </div>
-                        </div>
-                        <ul class="plan-features">
-                            <li>Basic restaurant analytics</li>
-                            <li>Menu management tools</li>
-                            <li>Up to 1000 orders/month</li>
-                        </ul>
-                        <a href="https://tasteiq.in/#contact" class="btn btn-primary">Contact Now</a>
-                    </div>
-
-                    <div class="pricing-card">
-                        <div class="popular-badge">Popular</div>
-                        <div class="plan-header text-center">
-                            <h2 class="pricing-plan-name">TasteIQ Pro</h2>
-                            <div class="pricing-price">
-                                <span class="price-inr">₹12,000</span>
-                                <span class="price-usd hidden">$144</span>
-                                <span class="unit">/year</span>
-                            </div>
-                        </div>
-                        <ul class="plan-features">
-                            <li>Advanced analytics dashboard</li>
-                            <li>Inventory management</li>
-                            <li>Up to 5000 orders/month</li>
-                        </ul>
-                        <a href="https://tasteiq.in/#contact" class="btn btn-primary">Contact Now</a>
-                    </div>
-
-                    <div class="pricing-card">
-                        <div class="plan-header text-center">
-                            <h2 class="pricing-plan-name">TasteIQ Elite</h2>
-                            <div class="pricing-price">
-                                <span class="price-inr">₹24,000</span>
-                                <span class="price-usd hidden">$288</span>
-                                <span class="unit">/year</span>
-                            </div>
-                        </div>
-                        <ul class="plan-features">
-                            <li>Enterprise-grade analytics</li>
-                            <li>Dedicated account manager</li>
-                            <li>Unlimited orders</li>
-                        </ul>
-                        <a href="https://tasteiq.in/#contact" class="btn btn-primary">Contact Now</a>
-                    </div>
-                </div>
+          <article class="pricing-card is-featured">
+            <span class="popular-badge">Popular</span>
+            <h2 class="pricing-plan-name">TasteIQ Pro</h2>
+            <p class="small text-muted mb-0">For growing food businesses</p>
+            <div class="pricing-price">
+              <span class="amount price-inr">₹12,000</span>
+              <span class="amount price-usd hidden">$144</span>
+              <span class="unit">/year</span>
             </div>
-        </section>
+            <ul class="plan-features">
+              <li>Everything in Lite</li>
+              <li>Inventory &amp; low-stock alerts</li>
+              <li>KOT + GST/VAT invoices</li>
+              <li>Up to 5,000 orders/month</li>
+              <li>Branded ordering site</li>
+            </ul>
+            <a href="index.html#contact" class="btn btn-primary">Choose Pro</a>
+          </article>
 
-        <footer class="footer">
-            <div class="container text-center py-4">
-                <p>All prices are billed annually. Secure payments processed through PhonePe Payment Gateway.</p>
+          <article class="pricing-card">
+            <h2 class="pricing-plan-name">TasteIQ Elite</h2>
+            <p class="small text-muted mb-0">For chains &amp; hotel F&amp;B</p>
+            <div class="pricing-price">
+              <span class="amount price-inr">₹24,000</span>
+              <span class="amount price-usd hidden">$288</span>
+              <span class="unit">/year</span>
             </div>
-        </footer>
-    </main>
+            <ul class="plan-features">
+              <li>Everything in Pro</li>
+              <li>Unlimited orders</li>
+              <li>Multi-outlet / multi-property</li>
+              <li>Dedicated account manager</li>
+              <li>Priority 24×7 support</li>
+            </ul>
+            <a href="hotels.html#contact" class="btn btn-outline-primary">Talk to sales</a>
+          </article>
+        </div>
 
-    <script>
-        document.getElementById('currencyToggle').addEventListener('change', function() {
-            const inrPrices = document.querySelectorAll('.price-inr');
-            const usdPrices = document.querySelectorAll('.price-usd');
-            if (this.checked) {
-                inrPrices.forEach(price => price.classList.add('hidden'));
-                usdPrices.forEach(price => price.classList.remove('hidden'));
-            } else {
-                inrPrices.forEach(price => price.classList.remove('hidden'));
-                usdPrices.forEach(price => price.classList.add('hidden'));
-            }
+        <p class="text-center text-muted small mt-4 mb-0">Prices billed annually. INR / USD toggle above. Hotels &amp; multi-property groups: see <a href="hotels.html">Hotels &amp; Properties</a> or <a href="index.html#contact">request a custom quote</a>.</p>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="h4 mb-3">Earn with TasteIQ</h2>
+        <p class="text-muted mb-4 mx-auto" style="max-width:36rem">Join our partner program for recurring revenue share when you refer restaurants, cafés, and hotels.</p>
+        <a href="sales-partner.html" class="btn btn-primary btn-lg">Become a sales partner</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="footer-brand">TasteIQ</h5>
+          <p class="small opacity-75 mb-0">Restaurant POS &amp; hotel F&amp;B OS for operators worldwide.</p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="h6">Explore</h5>
+          <ul class="list-unstyled small mb-0">
+            <li><a href="index.html" class="text-white">Restaurants &amp; Cafés</a></li>
+            <li><a href="hotels.html" class="text-white">Hotels &amp; Properties</a></li>
+            <li><a href="pricing.html" class="text-white">Pricing</a></li>
+            <li><a href="sales-partner.html" class="text-white">Partners</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="h6">Contact</h5>
+          <p class="small mb-0">founders@tasteiq.in<br>+91 6207466460<br>Bangalore, India</p>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <p class="text-center small mb-0 opacity-75">&copy; 2026 TasteIQ. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById('currencyToggle');
+      var labelInr = document.getElementById('labelInr');
+      var labelUsd = document.getElementById('labelUsd');
+      function sync() {
+        var usd = toggle.checked;
+        document.querySelectorAll('.price-inr').forEach(function (el) {
+          el.classList.toggle('hidden', usd);
         });
-    </script>
+        document.querySelectorAll('.price-usd').forEach(function (el) {
+          el.classList.toggle('hidden', !usd);
+        });
+        labelInr.classList.toggle('is-on', !usd);
+        labelUsd.classList.toggle('is-on', usd);
+      }
+      toggle.addEventListener('change', sync);
+      sync();
+    })();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

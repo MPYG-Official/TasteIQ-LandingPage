@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tasteiq.in/sitemap.xml
+
+# AI / LLM crawlers — public marketing pages are intentionally crawlable
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /

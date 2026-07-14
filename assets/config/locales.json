@@ -1,0 +1,52 @@
+{
+  "site": "https://tasteiq.in",
+  "defaultLocale": "en",
+  "locales": {
+    "en": {
+      "label": "English",
+      "hreflang": "en",
+      "dir": "ltr",
+      "banner": "View this page in your language"
+    },
+    "hi": {
+      "label": "हिन्दी",
+      "hreflang": "hi",
+      "dir": "ltr",
+      "banner": "इस पेज को हिन्दी में देखें"
+    },
+    "ar": {
+      "label": "العربية",
+      "hreflang": "ar",
+      "dir": "rtl",
+      "banner": "عرض هذه الصفحة بالعربية"
+    }
+  },
+  "pages": {
+    "hotels": {
+      "en": "/hotels.html",
+      "hi": "/hi/hotels.html",
+      "ar": "/ar/hotels.html"
+    },
+    "index": {
+      "en": "/index.html",
+      "hi": "/hi/index.html",
+      "ar": "/ar/index.html"
+    },
+    "hotel-ota": {
+      "en": "/hotel-ota-management.html"
+    },
+    "restaurant-pos": {
+      "en": "/restaurant-pos-software.html"
+    }
+  },
+  "regionHints": {
+    "IN": "hi",
+    "AE": "ar",
+    "SA": "ar",
+    "EG": "ar",
+    "QA": "ar",
+    "KW": "ar",
+    "BH": "ar",
+    "OM": "ar"
+  }
+}

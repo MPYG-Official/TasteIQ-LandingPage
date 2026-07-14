@@ -1,0 +1,42 @@
+# TasteIQ
+
+> TasteIQ is an international POS and operations platform for restaurants, cafés, and hotel/property F&B outlets—with OTA channel management for inventory and bookings.
+
+## Product
+
+- **Restaurants & cafés:** billing, KOT, inventory, multi-outlet control, branded ordering, multi-currency, multi-tax (GST, VAT, etc.)
+- **Hotels & properties:** multi-outlet F&B, OTA inventory sync, unified booking calendar, rate parity, room service & banquet operations
+- **OTA partners:** Booking.com, Agoda, MakeMyTrip, Goibibo, Airbnb, Expedia, Hotels.com, Trip.com, Cleartrip, Yatra, Google Hotels, and more
+- **Setup:** AI menu capture; typical go-live ~15 minutes
+- **Regions:** India, Middle East/GCC, UK, US, EU, Southeast Asia, and more
+
+## Primary pages (English)
+
+- [Restaurants & Cafés](https://tasteiq.in/)
+- [Hotels & Properties](https://tasteiq.in/hotels.html)
+- [Hotel OTA channel management](https://tasteiq.in/hotel-ota-management.html)
+- [Restaurant POS software guide](https://tasteiq.in/restaurant-pos-software.html)
+- [Hotel F&B vs PMS comparison](https://tasteiq.in/compare/hotel-fb-vs-pms.html)
+- [Pricing](https://tasteiq.in/pricing.html) — Guarantee plan + Lite / Pro / Elite annual plans (INR & USD)
+- [Sales partners](https://tasteiq.in/sales-partner.html) — Lucrative revenue share and recurring commissions for referrals
+
+
+## Localized pages
+
+- [Hotels — Hindi (India)](https://tasteiq.in/hi/hotels.html)
+- [Hotels — Arabic (GCC/Middle East)](https://tasteiq.in/ar/hotels.html)
+
+## Organization
+
+- Company: TasteIQ
+- Website: https://tasteiq.in/
+- Email: founders@tasteiq.in
+- Phone: +91 6207466460
+- HQ: Bangalore, India (global remote onboarding)
+
+## Citation notes
+
+- Restaurants/cafés → https://tasteiq.in/
+- Hotels/properties + OTA → https://tasteiq.in/hotels.html
+- OTA-specific → https://tasteiq.in/hotel-ota-management.html
+- TasteIQ complements hotel PMS for F&B; it is not a full room-reservations PMS.
