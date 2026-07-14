@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "policy": {
+    "landings": "Always localize hero + key sections for hi/ar/vi/zh/sw/fr/pt (native copy).",
+    "seoArticles": "Localize high-intent articles for priority markets first (hi, ar, vi, zh). Secondary locales may keep English until demand justifies translation.",
+    "legal": "English source of truth; translate only when counsel-reviewed.",
+    "pricingUnits": "/year/outlet for all public prices",
+    "autoDetect": "Browser language + regionHints; never force if user set tasteiq_locale_pref"
+  },
+  "locales": ["en", "hi", "ar", "vi", "zh", "sw", "fr", "pt"],
+  "priorityLocales": ["hi", "ar", "vi", "zh"],
+  "articleWorkflow": {
+    "sourceLocale": "en",
+    "steps": [
+      "Write English article under articles/ (or journeys/) with stable slug",
+      "Add SEO meta + canonical + hreflang stubs in frontmatter key file",
+      "Generate locale folders: articles/{locale}/{slug}.html only for priorityLocales unless content_tier=full",
+      "Keep CTA soft: help / WhatsApp / demo — never expose internal lead funnel language",
+      "Update sitemap.xml with all localized URLs"
+    ],
+    "requiredBlocks": [
+      "title",
+      "metaDescription",
+      "h1",
+      "intro",
+      "sections[]",
+      "ctaWhatsApp",
+      "relatedLinks[]"
+    ],
+    "toneRules": [
+      "Customer-facing language only",
+      "No internal strategy phrases (lead journey, organic intent, soft-sell after help)",
+      "Compliance guides: helpful first; TasteIQ POS mentioned lightly or not at all on journey pages"
+    ]
+  },
+  "pathPattern": {
+    "landing": "/{locale}/index.html | /{locale}/hotels.html",
+    "article": "/articles/{locale}/{slug}.html",
+    "englishArticle": "/articles/{slug}.html"
+  }
+}

@@ -1,42 +1,71 @@
 # TasteIQ
 
-> TasteIQ is an international POS and operations platform for restaurants, cafés, and hotel/property F&B outlets—with OTA channel management for inventory and bookings.
+> Hospitality OS with native property management (rooms, bookings, rates/availability, events, banquets, maintenance, night audit) plus full F&B for restaurants, cafés, bakeries, bars, and hotels—with OTA sync and new-outlet setup journeys (FSSAI, GST, licenses).
 
-## Product
+## Lead journey (organic → WhatsApp → POS)
 
-- **Restaurants & cafés:** billing, KOT, inventory, multi-outlet control, branded ordering, multi-currency, multi-tax (GST, VAT, etc.)
-- **Hotels & properties:** multi-outlet F&B, OTA inventory sync, unified booking calendar, rate parity, room service & banquet operations
-- **OTA partners:** Booking.com, Agoda, MakeMyTrip, Goibibo, Airbnb, Expedia, Hotels.com, Trip.com, Cleartrip, Yatra, Google Hotels, and more
-- **Setup:** AI menu capture; typical go-live ~15 minutes
-- **Regions:** India, Middle East/GCC, UK, US, EU, Southeast Asia, and more
+1. User searches pain points (FSSAI, open a cafe, bar POS, etc.)
+2. Lands on TasteIQ journey/guide pages
+3. Clicks WhatsApp CTA (+91 6207466460) for assisted services
+4. After compliance/setup, converts to TasteIQ software
 
-## Primary pages (English)
+Contact: founders@tasteiq.in · WhatsApp: https://wa.me/916207466460
 
-- [Restaurants & Cafés](https://tasteiq.in/)
-- [Hotels & Properties](https://tasteiq.in/hotels.html)
-- [Hotel OTA channel management](https://tasteiq.in/hotel-ota-management.html)
-- [Restaurant POS software guide](https://tasteiq.in/restaurant-pos-software.html)
-- [Hotel F&B vs PMS comparison](https://tasteiq.in/compare/hotel-fb-vs-pms.html)
-- [Pricing](https://tasteiq.in/pricing.html) — Guarantee plan + Lite / Pro / Elite annual plans (INR & USD)
-- [Sales partners](https://tasteiq.in/sales-partner.html) — Lucrative revenue share and recurring commissions for referrals
+## Categories covered
 
+Restaurants, QSR, takeaway, multi-cuisine, cafés, coffee shops, bakeries, cloud bakeries, sweet shops, juice bars, food courts, bars/pubs, hotel restaurants, boutique hotels, resorts, banquets, room service, OTA/channel management.
 
-## Localized pages
+## Key hubs
 
-- [Hotels — Hindi (India)](https://tasteiq.in/hi/hotels.html)
-- [Hotels — Arabic (GCC/Middle East)](https://tasteiq.in/ar/hotels.html)
+- https://tasteiq.in/
+- https://tasteiq.in/hotels.html
+- https://tasteiq.in/articles/
+- https://tasteiq.in/journeys/
+- https://tasteiq.in/features/
+- https://tasteiq.in/compare/
+- https://tasteiq.in/pricing.html
+- https://tasteiq.in/sales-partner.html
 
-## Organization
+## On-demand features
 
-- Company: TasteIQ
-- Website: https://tasteiq.in/
-- Email: founders@tasteiq.in
-- Phone: +91 6207466460
-- HQ: Bangalore, India (global remote onboarding)
+- /features/ai-receptionist.html — 24×7 AI receptionist add-on for restaurants & boutique hotels (cost savings vs missed calls / extra front-desk shifts; hybrid with human escalation)
+- /hi/features/ai-receptionist.html — Hindi
 
-## Citation notes
+## Comparison guides (fair, long-form)
 
-- Restaurants/cafés → https://tasteiq.in/
-- Hotels/properties + OTA → https://tasteiq.in/hotels.html
-- OTA-specific → https://tasteiq.in/hotel-ota-management.html
-- TasteIQ complements hotel PMS for F&B; it is not a full room-reservations PMS.
+- /compare/index.html — hub
+- /compare/tasteiq-vs-petpooja.html
+- /compare/tasteiq-vs-restroworks.html (also POSist)
+- /compare/tasteiq-vs-rista.html
+- /compare/tasteiq-vs-dotpe.html
+- /compare/tasteiq-vs-ezee.html
+- /compare/tasteiq-vs-foodics.html
+- /compare/tasteiq-vs-toast.html
+- /compare/tasteiq-vs-square.html
+- /compare/tasteiq-vs-cloudbeds.html
+- /compare/hotel-fb-vs-pms.html
+- /compare/tasteiq-vs-traditional-pos.html
+
+### Localized compares (Wave 2)
+
+- /hi/compare/ — India compares in Hindi (Petpooja, Restroworks, Rista, DotPe, eZee)
+- /ar/compare/tasteiq-vs-foodics.html — Arabic (RTL) Foodics comparison for GCC
+
+## Locales
+
+en, hi, ar, vi, zh, sw, fr, pt under path prefixes (e.g. /hi/hotels.html)
+
+## Journey pages
+
+- /journeys/fssai-license-for-restaurants.html
+- /journeys/gst-registration-for-restaurants.html
+- /journeys/shop-establishment-trade-license.html
+- /journeys/fire-noc-health-trade-license.html
+- /journeys/how-to-open-a-cafe.html
+- /journeys/how-to-open-a-restaurant.html
+- /journeys/how-to-open-a-bakery.html
+- /journeys/how-to-open-a-bar.html
+- /journeys/how-to-open-a-boutique-hotel.html
+- /journeys/restaurant-startup-cost-india.html
+
+See /sitemap.xml for the full crawlable URL set.

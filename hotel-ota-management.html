@@ -193,31 +193,9 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container navbar-shell">
-      <a class="navbar-brand" href="hotels.html">TasteIQ</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <nav class="audience-switch" aria-label="Choose your business type">
-        <a class="audience-switch__link" href="index.html"><span class="as-full">Restaurants &amp; Cafés</span><span class="as-short">Restaurants</span></a>
-        <a class="audience-switch__link is-active" href="hotels.html" aria-current="page"><span class="as-full">Hotels &amp; Properties</span><span class="as-short">Hotels</span></a>
-      </nav>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="hotels.html#quickstart">15-Min Setup</a></li>
-          <li class="nav-item"><a class="nav-link" href="hotels.html#switch">Why Switch</a></li>
-          <li class="nav-item"><a class="nav-link" href="hotels.html#pricing">Pricing</a></li>
-          <li class="nav-item"><a class="nav-link" href="hotels.html#features">Features</a></li>
-          <li class="nav-item"><a class="nav-link active" href="hotel-ota-management.html">OTA Management</a></li>
-          <li class="nav-item"><a class="nav-link" href="hotels.html#faq">FAQ</a></li>
-          <li class="nav-item"><a class="nav-link" href="hotels.html#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div id="site-nav" data-root="" data-active="ota"></div>
 
-  <section id="hero" class="text-center d-flex align-items-center">
+<section id="hero" class="text-center d-flex align-items-center">
     <div class="container">
       <div class="col-lg-10 mx-auto hero-panel hero-animate">
         <p class="brand-hero mb-2">TasteIQ</p>
@@ -362,8 +340,8 @@
     <div class="container">
       <div class="text-center reveal mb-5">
         <span class="section-eyebrow">Multi-outlet control</span>
-        <h2 class="section-title">Rooms on OTAs. Outlets on TasteIQ. One property brain.</h2>
-        <p class="section-subtitle mx-auto">Most channel managers stop at room inventory. TasteIQ extends to the F&amp;B layer—restaurant POS, café billing, room-service KOT, and banquet charges—so property owners see the full guest revenue picture.</p>
+        <h2 class="section-title">Rooms, rates, and outlets on TasteIQ. One property brain.</h2>
+        <p class="section-subtitle mx-auto">Most channel managers stop at room inventory. TasteIQ adds native property management plus the F&amp;B layer—restaurant POS, café billing, room-service KOT, and banquet charges—so property owners see the full guest revenue picture.</p>
       </div>
       <div class="row g-4">
         <div class="col-md-6 col-lg-3 reveal">
@@ -484,7 +462,7 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4">Can I manage hotel outlets alongside OTA bookings?</button>
               </h2>
               <div id="faqCollapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Yes. TasteIQ is a property F&amp;B platform with OTA channel management built in. Run restaurants, cafés, room service, and banquets from the same dashboard where you manage OTA inventory and bookings.</div>
+                <div class="accordion-body">Yes. TasteIQ is a property management platform with OTA channel management built in, plus full F&amp;B. Run rooms, bookings, restaurants, cafés, room service, and banquets from the same dashboard.</div>
               </div>
             </div>
             <div class="accordion-item">
@@ -518,35 +496,10 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h5 class="footer-brand">TasteIQ</h5>
-          <p>Hotel OTA channel management and property F&amp;B OS. Sync bookings across channels and run every dining outlet from one dashboard.</p>
-          <p class="mb-0"><a href="hotels.html">Hotels &amp; Properties →</a></p>
-        </div>
-        <div class="col-md-4">
-          <h5>Explore</h5>
-          <ul class="list-unstyled">
-            <li><a href="hotels.html">Hotel F&amp;B POS</a></li>
-            <li><a href="hotel-ota-management.html">OTA Channel Management</a></li>
-            <li><a href="index.html">Restaurants &amp; Cafés</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="hotels.html#contact">Book a Demo</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5>Contact</h5>
-          <p class="mb-0">Email: founders@tasteiq.in<br>Phone: +91 6207466460<br>Address: Bangalore, India</p>
-        </div>
-      </div>
-      <hr class="mt-4 mb-3 opacity-25">
-      <p class="text-center small mb-0 opacity-75">&copy; 2026 TasteIQ. All rights reserved. · <a href="index.html">Restaurant POS</a> · <a href="hotels.html">Hotel POS</a> · <a href="pricing.html">Pricing</a></p>
-    </div>
-  </footer>
-
-    <script src="assets/js/locale.js" defer></script>
+  <footer id="site-footer" data-root="" data-active="ota"></footer>
+  
+  <script src="assets/js/site-chrome.js"></script>
+  <script src="assets/js/locale.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     (function () {

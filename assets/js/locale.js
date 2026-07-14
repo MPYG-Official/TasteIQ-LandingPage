@@ -1,137 +1,156 @@
 /**
- * TasteIQ locale helper for static GitHub Pages.
- * - Suggests translated pages via banner (SEO-safe: real URLs, not JS-only content)
- * - Persists preference in localStorage
- * - Renders locale switcher when [data-locale-switcher] is present
+ * TasteIQ locale: auto-detect redirect + preference storage.
+ * Language <select> options are injected by site-chrome.js (no fetch required).
+ * This script only enhances change handling + first-visit redirects.
  */
 (function () {
   'use strict';
 
   var STORAGE_KEY = 'tasteiq_locale_pref';
-  var DISMISS_KEY = 'tasteiq_locale_banner_dismiss';
+  var AUTO_KEY = 'tasteiq_locale_autoredirect';
+
   function configUrl() {
-    // Root-absolute on custom domain (tasteiq.in); relative fallback for project Pages paths
     var parts = window.location.pathname.split('/').filter(Boolean);
     if (parts.length && parts[parts.length - 1].indexOf('.html') !== -1) parts.pop();
-    // Known locale prefixes
-    if (parts[0] === 'hi' || parts[0] === 'ar' || parts[0] === 'compare') {
+    var prefixes = { hi: 1, ar: 1, vi: 1, zh: 1, sw: 1, fr: 1, pt: 1, compare: 1, articles: 1, journeys: 1 };
+    if (parts[0] && prefixes[parts[0]]) {
       return '../'.repeat(parts.length) + 'assets/config/locales.json';
     }
-    return '/assets/config/locales.json';
-  }
-  var CONFIG_URL = configUrl();
-
-  function getPageKey() {
-    var path = window.location.pathname.replace(/^\//, '');
-    if (path === '' || path === 'index.html') return 'index';
-    if (path === 'hotels.html') return 'hotels';
-    if (path === 'hotel-ota-management.html') return 'hotel-ota';
-    if (path === 'restaurant-pos-software.html') return 'restaurant-pos';
-    if (path.indexOf('hi/hotels') === 0 || path === 'hi/hotels.html') return 'hotels';
-    if (path.indexOf('ar/hotels') === 0 || path === 'ar/hotels.html') return 'hotels';
-    if (path.indexOf('hi/index') === 0 || path === 'hi/index.html') return 'index';
-    if (path.indexOf('ar/index') === 0 || path === 'ar/index.html') return 'index';
-    return null;
+    return 'assets/config/locales.json';
   }
 
   function currentLocaleFromPath() {
     var path = window.location.pathname;
-    if (path.indexOf('/hi/') !== -1 || path.indexOf('hi/') === 0) return 'hi';
-    if (path.indexOf('/ar/') !== -1 || path.indexOf('ar/') === 0) return 'ar';
+    var m = path.match(/\/(hi|ar|vi|zh|sw|fr|pt)(?:\/|$)/);
+    if (m) return m[1];
     return 'en';
   }
 
-  function detectBrowserLocale() {
+  function getPageKey() {
+    var path = window.location.pathname.replace(/^\//, '');
+    if (!path || path === 'index.html') return 'index';
+    if (path === 'hotels.html') return 'hotels';
+    if (/^(hi|ar|vi|zh|sw|fr|pt)\/hotels\.html$/.test(path)) return 'hotels';
+    if (/^(hi|ar|vi|zh|sw|fr|pt)\/index\.html$/.test(path)) return 'index';
+    if (path.indexOf('hotels') !== -1) return 'hotels';
+    return 'index';
+  }
+
+  function detectBrowserLocale(config) {
     var langs = navigator.languages || [navigator.language || 'en'];
     for (var i = 0; i < langs.length; i++) {
-      var code = (langs[i] || 'en').split('-')[0].toLowerCase();
-      if (code === 'hi' || code === 'ar') return code;
+      var raw = (langs[i] || 'en').toLowerCase();
+      var short = raw.split('-')[0];
+      if (config.browserMap[raw]) return config.browserMap[raw];
+      if (config.browserMap[short]) return config.browserMap[short];
+      if (config.locales[short]) return short;
     }
     return 'en';
   }
 
-  function injectBanner(targetLocale, config, pageKey) {
-    if (localStorage.getItem(DISMISS_KEY) === '1') return;
-    if (currentLocaleFromPath() === targetLocale) return;
-
-    var pages = config.pages[pageKey];
-    if (!pages || !pages[targetLocale]) return;
-
-    var loc = config.locales[targetLocale];
-    var targetUrl = pages[targetLocale];
-    var banner = document.createElement('div');
-    banner.className = 'locale-banner';
-    banner.setAttribute('role', 'region');
-    banner.setAttribute('aria-label', 'Language suggestion');
-    banner.innerHTML =
-      '<div class="locale-banner__inner">' +
-        '<span class="locale-banner__text">' + (loc.banner || 'View in ' + loc.label) + '</span>' +
-        '<a class="locale-banner__cta" href="' + targetUrl + '">' + loc.label + '</a>' +
-        '<button type="button" class="locale-banner__dismiss" aria-label="Dismiss">×</button>' +
-      '</div>';
-    document.body.insertBefore(banner, document.body.firstChild);
-    document.body.classList.add('has-locale-banner');
-
-    banner.querySelector('.locale-banner__dismiss').addEventListener('click', function () {
-      localStorage.setItem(DISMISS_KEY, '1');
-      banner.remove();
-      document.body.classList.remove('has-locale-banner');
-    });
+  function absoluteUrl(path) {
+    if (!path) return null;
+    if (path.indexOf('http') === 0) return path;
+    return path.charAt(0) === '/' ? path : '/' + path;
   }
 
-  function renderSwitcher(config, pageKey) {
-    var nodes = document.querySelectorAll('[data-locale-switcher]');
-    if (!nodes.length || !pageKey) return;
+  function bindSelects(config, pageKey) {
+    var selects = document.querySelectorAll('[data-locale-select], #tasteiq-locale-select');
+    if (!selects.length) return;
+    var pages = (config && config.pages && (config.pages[pageKey] || config.pages.index)) || {};
 
-    var pages = config.pages[pageKey] || {};
-    var current = currentLocaleFromPath();
+    selects.forEach(function (sel) {
+      // Never wipe chrome-injected options. Only refill if empty.
+      if (sel.options.length < 2 && config && config.locales) {
+        Object.keys(config.locales).forEach(function (code) {
+          if (!pages[code]) return;
+          var opt = document.createElement('option');
+          opt.value = pages[code];
+          opt.textContent = config.locales[code].label;
+          if (code === currentLocaleFromPath()) opt.selected = true;
+          sel.appendChild(opt);
+        });
+      }
 
-    nodes.forEach(function (el) {
-      var html = '<div class="locale-switch" role="navigation" aria-label="Language">';
-      Object.keys(config.locales).forEach(function (code) {
-        if (!pages[code]) return;
-        var loc = config.locales[code];
-        var active = code === current ? ' is-active' : '';
-        var aria = code === current ? ' aria-current="true"' : '';
-        html += '<a class="locale-switch__link' + active + '" href="' + pages[code] + '" hreflang="' + loc.hreflang + '"' + aria + '>' + loc.label + '</a>';
+      if (sel._tasteiqBound) return;
+      sel._tasteiqBound = true;
+      sel.addEventListener('change', function () {
+        var url = sel.value;
+        if (!url) return;
+        var code = currentLocaleFromPath();
+        Object.keys(pages).forEach(function (c) {
+          if (pages[c] === url || absoluteUrl(pages[c]) === absoluteUrl(url)) code = c;
+        });
+        // Relative paths from chrome (e.g. hi/index.html)
+        if (code === currentLocaleFromPath()) {
+          var m = String(url).match(/(?:^|\/)(hi|ar|vi|zh|sw|fr|pt)(?:\/|$)/);
+          if (m) code = m[1];
+          else if (/index\.html$|hotels\.html$/.test(url) && url.indexOf('/') === -1) code = 'en';
+          else if (url === '/' || url === '/index.html') code = 'en';
+        }
+        try { localStorage.setItem(STORAGE_KEY, code); } catch (e) {}
+        window.location.href = url.indexOf('http') === 0 || url.charAt(0) === '/'
+          ? absoluteUrl(url)
+          : url;
       });
-      html += '</div>';
-      el.innerHTML = html;
     });
   }
 
-  function applyDocumentDir(config) {
+  function applyDir(config) {
     var current = currentLocaleFromPath();
     var loc = config.locales[current];
     if (loc && loc.dir === 'rtl') {
       document.documentElement.setAttribute('dir', 'rtl');
+      document.documentElement.setAttribute('lang', loc.hreflang || current);
     }
   }
 
-  fetch(CONFIG_URL)
-    .then(function (r) { return r.json(); })
-    .catch(function () { return null; })
-    .then(function (config) {
-      if (!config) return;
+  function maybeAutoRedirect(config, pageKey) {
+    try {
+      if (sessionStorage.getItem(AUTO_KEY) === '1') return;
+      if (localStorage.getItem(STORAGE_KEY)) return;
+      if (currentLocaleFromPath() !== 'en') return;
+      if (/[?&]lang=en\b/.test(window.location.search)) return;
 
-      var pageKey = getPageKey();
-      var current = currentLocaleFromPath();
-      applyDocumentDir(config);
-      renderSwitcher(config, pageKey);
+      var suggested = detectBrowserLocale(config);
+      if (!suggested || suggested === 'en') return;
+      var pages = config.pages[pageKey];
+      if (!pages || !pages[suggested]) return;
 
-      var preferred = localStorage.getItem(STORAGE_KEY);
-      var suggested = preferred || detectBrowserLocale();
-      if (pageKey && suggested && suggested !== current && suggested !== 'en') {
-        injectBanner(suggested, config, pageKey);
-      }
+      sessionStorage.setItem(AUTO_KEY, '1');
+      localStorage.setItem(STORAGE_KEY, suggested);
+      window.location.replace(absoluteUrl(pages[suggested]));
+    } catch (e) {}
+  }
 
-      document.querySelectorAll('[data-locale-switcher] a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          var href = link.getAttribute('href') || '';
-          if (href.indexOf('/hi/') !== -1) localStorage.setItem(STORAGE_KEY, 'hi');
-          else if (href.indexOf('/ar/') !== -1) localStorage.setItem(STORAGE_KEY, 'ar');
-          else localStorage.setItem(STORAGE_KEY, 'en');
-        });
+  function boot(config) {
+    var pageKey = getPageKey();
+    if (config) {
+      applyDir(config);
+      maybeAutoRedirect(config, pageKey);
+    }
+    bindSelects(config, pageKey);
+  }
+
+  function load() {
+    // Bind immediately so dropdown works even if fetch fails
+    bindSelects(null, getPageKey());
+
+    fetch(configUrl())
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(boot)
+      .catch(function () {
+        fetch('/assets/config/locales.json')
+          .then(function (r) { return r.json(); })
+          .then(boot)
+          .catch(function () { boot(null); });
       });
-    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', load);
+  } else {
+    setTimeout(load, 0);
+  }
+  window.addEventListener('tasteiq:chrome-ready', load);
 })();

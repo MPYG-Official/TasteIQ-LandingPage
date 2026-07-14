@@ -2,42 +2,49 @@
   "site": "https://tasteiq.in",
   "defaultLocale": "en",
   "locales": {
-    "en": {
-      "label": "English",
-      "hreflang": "en",
-      "dir": "ltr",
-      "banner": "View this page in your language"
-    },
-    "hi": {
-      "label": "हिन्दी",
-      "hreflang": "hi",
-      "dir": "ltr",
-      "banner": "इस पेज को हिन्दी में देखें"
-    },
-    "ar": {
-      "label": "العربية",
-      "hreflang": "ar",
-      "dir": "rtl",
-      "banner": "عرض هذه الصفحة بالعربية"
-    }
+    "en": { "label": "English", "hreflang": "en", "dir": "ltr", "native": "English" },
+    "hi": { "label": "हिन्दी", "hreflang": "hi", "dir": "ltr", "native": "Hindi" },
+    "ar": { "label": "العربية", "hreflang": "ar", "dir": "rtl", "native": "Arabic" },
+    "vi": { "label": "Tiếng Việt", "hreflang": "vi", "dir": "ltr", "native": "Vietnamese" },
+    "zh": { "label": "中文", "hreflang": "zh-Hans", "dir": "ltr", "native": "Chinese" },
+    "sw": { "label": "Kiswahili", "hreflang": "sw", "dir": "ltr", "native": "Swahili" },
+    "fr": { "label": "Français", "hreflang": "fr", "dir": "ltr", "native": "French" },
+    "pt": { "label": "Português", "hreflang": "pt", "dir": "ltr", "native": "Portuguese" }
   },
   "pages": {
-    "hotels": {
-      "en": "/hotels.html",
-      "hi": "/hi/hotels.html",
-      "ar": "/ar/hotels.html"
-    },
     "index": {
       "en": "/index.html",
       "hi": "/hi/index.html",
-      "ar": "/ar/index.html"
+      "ar": "/ar/index.html",
+      "vi": "/vi/index.html",
+      "zh": "/zh/index.html",
+      "sw": "/sw/index.html",
+      "fr": "/fr/index.html",
+      "pt": "/pt/index.html"
     },
-    "hotel-ota": {
-      "en": "/hotel-ota-management.html"
-    },
-    "restaurant-pos": {
-      "en": "/restaurant-pos-software.html"
+    "hotels": {
+      "en": "/hotels.html",
+      "hi": "/hi/hotels.html",
+      "ar": "/ar/hotels.html",
+      "vi": "/vi/hotels.html",
+      "zh": "/zh/hotels.html",
+      "sw": "/sw/hotels.html",
+      "fr": "/fr/hotels.html",
+      "pt": "/pt/hotels.html"
     }
+  },
+  "browserMap": {
+    "hi": "hi",
+    "ar": "ar",
+    "vi": "vi",
+    "zh": "zh",
+    "zh-cn": "zh",
+    "zh-hans": "zh",
+    "zh-tw": "zh",
+    "sw": "sw",
+    "fr": "fr",
+    "pt": "pt",
+    "pt-br": "pt"
   },
   "regionHints": {
     "IN": "hi",
@@ -47,6 +54,21 @@
     "QA": "ar",
     "KW": "ar",
     "BH": "ar",
-    "OM": "ar"
+    "OM": "ar",
+    "VN": "vi",
+    "CN": "zh",
+    "TW": "zh",
+    "HK": "zh",
+    "SG": "zh",
+    "KE": "sw",
+    "TZ": "sw",
+    "UG": "sw",
+    "FR": "fr",
+    "MA": "fr",
+    "SN": "fr",
+    "BR": "pt",
+    "PT": "pt",
+    "AO": "pt",
+    "MZ": "pt"
   }
 }

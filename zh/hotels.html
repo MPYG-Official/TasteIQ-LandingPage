@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>酒店 F&amp;B POS 与 OTA 管理 | TasteIQ</title>
+  <meta name="description" content="TasteIQ 服务酒店与物业：多 outlet 餐饮收银、Booking.com/Agoda/Airbnb 库存与预订同步、客房送餐与宴会。约 15 分钟上线，零前置风险。">
+  <link rel="canonical" href="https://tasteiq.in/zh/hotels.html">
+  <link rel="alternate" hreflang="en" href="https://tasteiq.in/hotels.html">
+  <link rel="alternate" hreflang="hi" href="https://tasteiq.in/hi/hotels.html">
+  <link rel="alternate" hreflang="ar" href="https://tasteiq.in/ar/hotels.html">
+  <link rel="alternate" hreflang="vi" href="https://tasteiq.in/vi/hotels.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://tasteiq.in/zh/hotels.html">
+  <link rel="alternate" hreflang="sw" href="https://tasteiq.in/sw/hotels.html">
+  <link rel="alternate" hreflang="fr" href="https://tasteiq.in/fr/hotels.html">
+  <link rel="alternate" hreflang="pt" href="https://tasteiq.in/pt/hotels.html">
+  <link rel="alternate" hreflang="x-default" href="https://tasteiq.in/hotels.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="keywords" content="酒店POS,OTA渠道管理,Booking Agoda Airbnb,酒店餐饮系统,TasteIQ">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tasteiq.in/zh/hotels.html">
+  <meta property="og:title" content="酒店 F&amp;B POS 与 OTA 管理 | TasteIQ">
+  <meta property="og:description" content="TasteIQ 服务酒店与物业：多 outlet 餐饮收银、Booking.com/Agoda/Airbnb 库存与预订同步、客房送餐与宴会。约 15 分钟上线，零前置风险。">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:site_name" content="TasteIQ">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="酒店 F&amp;B POS 与 OTA 管理 | TasteIQ">
+  <meta name="twitter:description" content="TasteIQ 服务酒店与物业：多 outlet 餐饮收银、Booking.com/Agoda/Airbnb 库存与预订同步、客房送餐与宴会。约 15 分钟上线，零前置风险。">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "url": "https://tasteiq.in/zh/hotels.html",
+        "name": "酒店 F&B POS 与 OTA 管理 | TasteIQ",
+        "inLanguage": "zh-Hans"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "TasteIQ Hotels & Properties",
+        "applicationCategory": "BusinessApplication",
+        "url": "https://tasteiq.in/zh/hotels.html",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #1f2937;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(110, 72, 170, 0.12), transparent 45%),
+        radial-gradient(circle at 85% 0%, rgba(157, 80, 187, 0.12), transparent 45%),
+        #f6f7fb;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, h5, .brand-hero { font-family: 'Sora', 'Poppins', sans-serif; letter-spacing: -0.015em; }
+    .bg-primary-gradient { background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%); }
+    .btn-outline-light { border-width: 2px; box-shadow: 0 10px 24px rgba(255,255,255,.1); }
+    .btn-primary {
+      background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+      border-color: transparent;
+      box-shadow: 0 10px 24px rgba(110,72,170,.25);
+      transition: all .3s ease;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #7f56d9, #b35ce5);
+      border-color: transparent;
+      transform: translateY(-2px);
+    }
+    .card:not(.bg-primary-gradient) {
+      border: 1px solid rgba(255,255,255,.7);
+      border-radius: 18px;
+      background: rgba(255,255,255,.85);
+      box-shadow: 0 16px 40px rgba(16,24,40,.12);
+    }
+    .feature-icon { font-size: 2rem; color: #6e48aa; margin-bottom: 1rem; }
+    #hero {
+      background: var(--hero-bg) center/cover no-repeat;
+      padding: 120px 0;
+      position: relative;
+      min-height: 78vh;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(8,10,20,.72), rgba(8,10,20,.55));
+    }
+    #hero .container { position: relative; z-index: 1; }
+    .badge-special {
+      background: linear-gradient(135deg, #ff4081, #ff6fa3);
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: .8rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+    .hero-actions .btn { min-width: 0; max-width: 100%; }
+    .step-card {
+      position: relative;
+      padding: 18px 18px 18px 78px;
+      margin-bottom: 18px;
+      background: rgba(255,255,255,.88);
+      border-radius: 16px;
+      border: 1px solid rgba(110,72,170,.12);
+      box-shadow: 0 12px 30px rgba(16,24,40,.08);
+    }
+    .step-number {
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, #6e48aa, #9d50bb);
+    }
+    .switch-card, .price-card, .concern-card, .usecase-card {
+      height: 100%;
+      padding: 24px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(255,255,255,.7);
+      box-shadow: 0 16px 40px rgba(16,24,40,.1);
+    }
+    .price-value { font-size: 2.2rem; font-weight: 800; color: #6e48aa; }
+    .ota-wall { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 16px; }
+    .ota-wall span {
+      padding: 10px 18px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.95);
+      border: 1px solid rgba(110,72,170,.16);
+      font-weight: 600;
+      color: #374151;
+      box-shadow: 0 8px 20px rgba(16,24,40,.06);
+    }
+    .accordion-item {
+      background: rgba(255,255,255,.85);
+      border-radius: 14px !important;
+      box-shadow: 0 12px 30px rgba(16,24,40,.1);
+      overflow: hidden;
+      margin-bottom: 12px;
+      border: none;
+    }
+    .feature-list li { margin-bottom: 12px; position: relative; padding-left: 28px; }
+    .feature-list li i { position: absolute; left: 0; top: 4px; color: #6e48aa; }
+    .sync-grid .card { min-height: 160px; }
+    @media (max-width: 991.98px) {
+      #hero { padding: 88px 0 72px; min-height: auto; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions .btn { min-width: 0; width: 100%; }
+      .step-card { padding-left: 70px; }
+    }
+    @media (max-width: 575.98px) {
+      .step-card { padding-left: 18px; padding-top: 70px; }
+      .step-number { left: 18px; }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="site-nav" data-root="../" data-active="hotels"></div>
+
+  <section id="hero" class="text-white text-center d-flex align-items-center" style="--hero-bg:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto hero-panel hero-animate">
+          <p class="brand-hero mb-2">TasteIQ</p>
+          <div class="badge-special mb-3">酒店、度假村与多业态物业 F&amp;B</div>
+          <h1 class="display-5 fw-bold mb-3">酒店餐饮 + OTA 库存与预订——全球一套平台</h1>
+          <p class="lead mb-4">在 Booking.com、Agoda、Airbnb 等渠道同步房态与预订，同时用一个看板管理餐厅、咖啡厅、客房送餐与宴会。约 15 分钟完成 outlet 上线，零前置风险。</p>
+          <div class="timer-box" data-offer-countdown>
+            <p class="mb-0">限时优惠剩余：</p>
+            <div class="countdown-timer" role="timer" aria-live="off" aria-atomic="true">
+              <div class="countdown-box">
+                <div class="countdown-value" data-cd="days">--</div>
+                <div class="countdown-label">天</div>
+              </div>
+              <div class="countdown-box">
+                <div class="countdown-value" data-cd="hours">--</div>
+                <div class="countdown-label">时</div>
+              </div>
+              <div class="countdown-box">
+                <div class="countdown-value" data-cd="mins">--</div>
+                <div class="countdown-label">分</div>
+              </div>
+              <div class="countdown-box">
+                <div class="countdown-value" data-cd="secs">--</div>
+                <div class="countdown-label">秒</div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary btn-lg">预约 15 分钟演示</a>
+            <a href="#otas" class="btn btn-outline-light btn-lg">查看 OTA 合作墙</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-strip" aria-label="TasteIQ 酒店证明点">
+    <div class="container">
+      <div class="trust-strip__inner reveal">
+        <div class="trust-item"><strong>12+</strong><span>OTA 渠道合作</span></div><div class="trust-item"><strong>1</strong><span>库存与预订中枢</span></div><div class="trust-item"><strong>15 分钟</strong><span>Outlet 上线</span></div><div class="trust-item"><strong>0</strong><span>前置切换成本</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="otas" class="py-5 section-pad">
+    <div class="container">
+      <div class="text-center reveal mb-4">
+        <span class="section-eyebrow">OTA 与店内 F&amp;B</span>
+        <h2 class="mb-2">客人来自 Booking.com、Agoda、Airbnb——餐饮收入应留在物业内</h2>
+        <p class="section-subtitle mx-auto mb-0">OTA 填满客房；TasteIQ 让店内餐厅、咖啡厅与客房送餐更顺畅，减少高佣金第三方外卖。</p>
+      </div>
+      <div class="ota-wall reveal mb-4" aria-label="OTA">
+        <span>Booking.com</span>
+        <span>Airbnb</span>
+        <span>Agoda</span>
+        <span>Expedia</span>
+        <span>Trip.com</span>
+        <span>Ctrip</span>
+      </div>
+      <div class="row justify-content-center"><div class="col-lg-9">
+        <p class="text-center text-muted reveal mb-0">客人从 Booking.com、Agoda 或 Airbnb 入住后，用品牌点餐与多 outlet 收银把 F&amp;B 留在物业内——更少分散，更多直接餐饮收入。</p>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="sync" class="py-5 bg-light section-pad">
+    <div class="container">
+      <div class="text-center reveal mb-5">
+        <span class="section-eyebrow">库存与预订同步</span>
+        <h2 class="mb-2">多渠道房态与预订的统一中枢</h2>
+        <p class="section-subtitle mx-auto mb-0">减少超售、日历偏差与手工改价——让预订流与 F&amp;B 营运对齐。</p>
+      </div>
+      <div class="row g-4 sync-grid">
+        <div class="col-md-4">
+          <div class="card h-100 reveal"><div class="card-body p-4">
+            <i class="bi bi-arrow-repeat feature-icon"></i>
+            <h3 class="h5">房态同步</h3>
+            <p class="mb-0">从一个地方更新各 OTA 的可售与限制，高峰更少出错。</p>
+          </div></div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 reveal"><div class="card-body p-4">
+            <i class="bi bi-calendar-check feature-icon"></i>
+            <h3 class="h5">预订归集到统一日历</h3>
+            <p class="mb-0">聚合 Booking.com、Agoda、Airbnb 等预订，前台与 F&amp;B 看同一真相源。</p>
+          </div></div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 reveal"><div class="card-body p-4">
+            <i class="bi bi-shield-lock feature-icon"></i>
+            <h3 class="h5">佣金可控</h3>
+            <p class="mb-0">入住后引导店内品牌点餐——把餐饮毛利留在物业，而非外卖 App。</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="concerns" class="py-5 section-pad">
+    <div class="container">
+      <div class="text-center reveal mb-5">
+        <span class="section-eyebrow">业主与总经理关切</span>
+        <h2 class="mb-2">我们理解酒店业主的真实顾虑</h2>
+        <p class="section-subtitle mx-auto mb-0">换系统不能搞垮高峰班，也不能弄丢 OTA 预订。</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="concern-card reveal">
+            <i class="bi bi-exclamation-triangle feature-icon"></i>
+            <h3 class="h5">担心高峰停机</h3>
+            <p class="mb-0 text-muted">与旧系统并行、快速培训、专人陪跑——周末 F&amp;B 不会“断电”。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="concern-card reveal">
+            <i class="bi bi-diagram-2 feature-icon"></i>
+            <h3 class="h5">多 outlet 一套报表</h3>
+            <p class="mb-0 text-muted">餐厅+咖啡+客房送餐+宴会在一个看板——GM 看清每个点的毛利。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="concern-card reveal">
+            <i class="bi bi-currency-exchange feature-icon"></i>
+            <h3 class="h5">OTA 佣金与 App 抽成</h3>
+            <p class="mb-0 text-muted">Booking.com 负责满房，TasteIQ 负责把餐饮收入留在店内品牌渠道。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="concern-card reveal">
+            <i class="bi bi-people feature-icon"></i>
+            <h3 class="h5">员工抗拒新软件</h3>
+            <p class="mb-0 text-muted">界面简洁，三步出单，厨打清晰。通常 30 分钟培训足够。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="concern-card reveal">
+            <i class="bi bi-hdd-network feature-icon"></i>
+            <h3 class="h5">不想再买硬件</h3>
+            <p class="mb-0 text-muted">沿用现有平板/手机/电脑与打印机。不绑定昂贵设备。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="concern-card reveal">
+            <i class="bi bi-question-circle feature-icon"></i>
+            <h3 class="h5">要不要替换整套 PMS？</h3>
+            <p class="mb-0 text-muted">不必。TasteIQ 聚焦 F&amp;B outlet 与 OTA 同步——补强 PMS，而非替代全量客房预订。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="py-5 bg-light section-pad">
+    <div class="container">
+      <div class="text-center reveal mb-5">
+        <span class="section-eyebrow">平台</span>
+        <h2 class="mb-2">一体化酒店 F&amp;B 系统</h2>
+        <p class="section-subtitle mx-auto mb-0">运营餐饮点位并提升店内客收入所需的一切。</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 reveal">
+            <div class="card-body p-4">
+              <i class="bi bi-grid-3x3-gap feature-icon"></i>
+              <h3 class="h5">多 outlet 物业看板</h3>
+              <p class="mb-0">餐厅、咖啡、客房送餐、宴会——按点位出报表给 GM 与 F&amp;B 经理。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 reveal">
+            <div class="card-body p-4">
+              <i class="bi bi-lightning-charge feature-icon"></i>
+              <h3 class="h5">极速收银与厨打</h3>
+              <p class="mb-0">三步账单、清晰 KOT、合规税票覆盖每个 outlet。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 reveal">
+            <div class="card-body p-4">
+              <i class="bi bi-globe feature-icon"></i>
+              <h3 class="h5">品牌宾客点餐</h3>
+              <p class="mb-0">堂食、客房送餐、外带走自有品牌——降低第三方佣金。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 reveal">
+            <div class="card-body p-4">
+              <i class="bi bi-box-seam feature-icon"></i>
+              <h3 class="h5">中央库存与菜单</h3>
+              <p class="mb-0">按单扣库、低库存提醒、全点位菜单更新，另支持 AI 菜单拍照建档。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 reveal">
+            <div class="card-body p-4">
+              <i class="bi bi-building feature-icon"></i>
+              <h3 class="h5">物业开业陪跑</h3>
+              <p class="mb-0">快速配置多 outlet，并按餐饮空间设置品牌主题。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 reveal">
+            <div class="card-body p-4">
+              <i class="bi bi-graph-up feature-icon"></i>
+              <h3 class="h5">F&amp;B 毛利报表</h3>
+              <p class="mb-0">按点位、班次、渠道看收入——库存决策更聪明。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="usecases" class="py-5 section-pad">
+    <div class="container">
+      <div class="text-center reveal mb-5">
+        <span class="section-eyebrow">场景</span>
+        <h2 class="mb-2">服务酒店与物业真实场景</h2>
+        <p class="section-subtitle mx-auto mb-0">从精品城中酒店到多餐厅度假村。</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="usecase-card reveal">
+            <h3 class="h5">城市精品酒店</h3>
+            <p class="mb-0 text-muted">餐厅+大堂咖啡+客房送餐一套系统——Agoda/Booking 客人快速点餐。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="usecase-card reveal">
+            <h3 class="h5">海滨/山地度假村</h3>
+            <p class="mb-0 text-muted">多点位分散：沙滩吧、主餐厅、水疗咖啡——菜单与库存同步。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="usecase-card reveal">
+            <h3 class="h5">服务式公寓</h3>
+            <p class="mb-0 text-muted">早餐自助+迷你咖啡+临时宴会开单更清晰。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="usecase-card reveal">
+            <h3 class="h5">民宿与别墅管理</h3>
+            <p class="mb-0 text-muted">Airbnb 库存同步 + 预点餐/私宴简易 F&amp;B。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="usecase-card reveal">
+            <h3 class="h5">商务酒店</h3>
+            <p class="mb-0 text-muted">午高峰、会议套餐、企业桌——合单与税务清晰。</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="usecase-card reveal">
+            <h3 class="h5">小型连锁物业</h3>
+            <p class="mb-0 text-muted">统一 F&amp;B SOP 与多物业报表，一套登录搞定。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="py-5 bg-light section-pad">
+    <div class="container">
+      <div class="text-center reveal mb-5">
+        <span class="section-eyebrow">价格</span>
+        <h2 class="mb-2">物业价格摘要——清晰透明</h2>
+        <p class="section-subtitle mx-auto mb-0">先零风险；正式切换后再低 15%。详情见 Pricing。</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="price-card reveal text-center">
+            <span class="badge-special mb-3">零风险</span>
+            <div class="price-value">¥0</div>
+            <p class="text-muted">当前订阅结束前无需预付</p>
+            <ul class="list-unstyled feature-list text-start mx-auto" style="max-width:280px">
+              <li><i class="bi bi-check-circle-fill"></i> 完整 F&amp;B + OTA 同步</li>
+              <li><i class="bi bi-check-circle-fill"></i> 与旧系统并行</li>
+              <li><i class="bi bi-check-circle-fill"></i> 专人开业支持</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="price-card reveal text-center">
+            <span class="badge-special mb-3">切换后</span>
+            <div class="price-value">−15%</div>
+            <p class="text-muted">低于您现有服务商</p>
+            <ul class="list-unstyled feature-list text-start mx-auto" style="max-width:280px">
+              <li><i class="bi bi-check-circle-fill"></i> 多 outlet 含在内</li>
+              <li><i class="bi bi-check-circle-fill"></i> 不绑定硬件</li>
+              <li><i class="bi bi-check-circle-fill"></i> 支持 go-live</li>
+            </ul>
+            <a href="../pricing.html" class="btn btn-primary mt-2">查看价格表</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-5 section-pad">
+    <div class="container">
+      <h2 class="text-center mb-5">常见问题</h2>
+      <div class="row"><div class="col-lg-8 mx-auto"><div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                  什么是酒店 F&amp;B POS？
+                </button>
+              </h2>
+              <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">运行酒店内餐饮点位——餐厅、咖啡厅、客房送餐与宴会——共享收银、厨打、库存与报表。TasteIQ 正是为此打造。</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                  能否用一个看板管理多个 outlet？
+                </button>
+              </h2>
+              <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">可以。GM 与 F&amp;B 经理可控制所有餐饮点的菜单、库存与报表。</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                  与 Booking.com / Agoda / Airbnb 同步指什么？
+                </button>
+              </h2>
+              <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">TasteIQ 帮助集中热门 OTA 的库存与预订，减少日历偏差与超售，并在入住后留住店内 F&amp;B。</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                  物业最快多久上线？
+                </button>
+              </h2>
+              <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">多数上传菜单后约 15 分钟上线；复杂多 outlet 由团队指导。</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                  会替换整套酒店 PMS 吗？
+                </button>
+              </h2>
+              <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">不会。聚焦 F&amp;B 与 OTA 同步，补强而非替代全量客房预订 PMS。</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                  如何联系？
+                </button>
+              </h2>
+              <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faq6" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">邮件 founders@tasteiq.in，或 WhatsApp/电话 +91 6207466460 预约中文演示。</div>
+              </div>
+            </div>
+      </div></div></div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5 bg-primary-gradient text-white text-center">
+    <div class="container">
+      <h2 class="mb-3">别再为酒店 F&amp;B 多付钱</h2>
+      <p class="lead mb-4">切换 TasteIQ——当前订阅结束前免费，之后再低 15%。把 Booking.com、Agoda、Airbnb 客人的餐饮收入留在物业。</p>
+      <ul class="list-unstyled feature-list text-start mx-auto mb-4" style="max-width:420px;color:#fff">
+              <li><i class="bi bi-check-circle-fill" style="color:#fff"></i> <strong>零成本</strong> 直至旧约到期</li>
+              <li><i class="bi bi-check-circle-fill" style="color:#fff"></i> <strong>15 分钟</strong> outlet 配置</li>
+              <li><i class="bi bi-check-circle-fill" style="color:#fff"></i> <strong>OTA 墙</strong> + 多 outlet F&amp;B</li>
+      </ul>
+      <a href="mailto:founders@tasteiq.in" class="btn btn-light btn-lg me-2 mb-2">founders@tasteiq.in</a>
+      <a href="https://wa.me/916207466460?text=%E4%BD%A0%E5%A5%BDTasteIQ%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E7%BA%A6%E9%85%92%E5%BA%97F%26B%E4%B8%8EOTA%E4%B8%AD%E6%96%87%E6%BC%94%E7%A4%BA%E3%80%82" class="btn btn-outline-light btn-lg mb-2" target="_blank" rel="noopener noreferrer">WhatsApp 演示</a>
+      <p class="mt-3 mb-0 small opacity-75">Bangalore · <a class="text-white" href="index.html">餐厅与咖啡 →</a> · <a class="text-white" href="../hotels.html" hreflang="en">English</a></p>
+    </div>
+  </section>
+
+  <footer id="site-footer" data-root="../" data-active="hotels"></footer>
+
+
+  <script>
+    (function () {
+      var nodes = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || !nodes.length) {
+        nodes.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      nodes.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+  <script src="../assets/js/countdown-offer.js" defer></script>
+  <script src="../assets/js/reveal.js" defer></script>
+  <script src="../assets/js/site-chrome.js"></script>
+  <script src="../assets/js/locale.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

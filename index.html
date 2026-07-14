@@ -10,6 +10,11 @@
   <link rel="alternate" hreflang="en" href="https://tasteiq.in/">
   <link rel="alternate" hreflang="hi" href="https://tasteiq.in/hi/index.html">
   <link rel="alternate" hreflang="ar" href="https://tasteiq.in/ar/index.html">
+  <link rel="alternate" hreflang="vi" href="https://tasteiq.in/vi/index.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://tasteiq.in/zh/index.html">
+  <link rel="alternate" hreflang="sw" href="https://tasteiq.in/sw/index.html">
+  <link rel="alternate" hreflang="fr" href="https://tasteiq.in/fr/index.html">
+  <link rel="alternate" hreflang="pt" href="https://tasteiq.in/pt/index.html">
   <link rel="alternate" hreflang="x-default" href="https://tasteiq.in/">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="keywords" content="restaurant POS software, restaurant POS India, café POS, cloud kitchen POS, restaurant management system, GST billing POS, TasteIQ">
@@ -246,8 +251,11 @@
     }
     
     #hero {
+      margin-top: 0;
+      padding-top: 32px;
+      padding-bottom: 88px;
       background: url('https://images.unsplash.com/photo-1592861956120-e524fc739696?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      padding: 120px 0;
+      
       position: relative;
     }
     
@@ -283,6 +291,13 @@
       box-shadow: 0 28px 70px rgba(0, 0, 0, 0.38);
     }
 
+
+    #hero .hero-panel {
+      /* panel glass + padding come from styles.css for EN + locale parity */
+      max-width: 920px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     #hero .badge-special {
       animation: heroRise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.04s both;
     }
@@ -298,9 +313,7 @@
       gap: 14px;
     }
 
-    .hero-actions .btn {
-      min-width: 220px;
-    }
+    .hero-actions .btn { min-width: 0; max-width: 100%; }
     
     .feature-list li {
       margin-bottom: 15px;
@@ -353,18 +366,7 @@
       font-weight: 500;
     }
     
-    .timer-box {
-      background-color: rgba(0, 0, 0, 0.8);
-      border-radius: 10px;
-      padding: 10px 15px;
-      margin-top: 15px;
-      display: inline-block;
-    }
-    
-    .timer-box span {
-      font-size: 2rem;
-      font-weight: 700;
-    }
+    /* timer-box / countdown: owned by styles.css (locale-safe sizing) */
     
     .step-card {
       position: relative;
@@ -471,35 +473,8 @@
       font-weight: 600;
     }
     
-    .countdown-timer {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 15px 0;
-    }
-    
-    .countdown-box {
-      background: rgba(255, 255, 255, 0.16);
-      color: white;
-      padding: 10px;
-      border-radius: 10px;
-      width: 60px;
-      text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
 
-    .timer-box {
-      background-color: rgba(12, 12, 22, 0.6);
-      border-radius: 12px;
-      padding: 10px 15px;
-      margin-top: 15px;
-      display: inline-block;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
+    /* countdown styles: see styles.css */
 
     .bg-light {
       background-color: #f4f6fb !important;
@@ -519,16 +494,8 @@
       border-color: rgba(110, 72, 170, 0.15);
     }
     
-    .countdown-value {
-      font-size: 1.5rem;
-      font-weight: 700;
-      line-height: 1;
-    }
-    
-    .countdown-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-    }
+
+    /* countdown styles: see styles.css */
 
     .whatsapp-widget {
             position: fixed;
@@ -785,7 +752,8 @@
     /* Mobile layout polish */
     @media (max-width: 991.98px) {
       #hero {
-        padding: 88px 0 72px;
+        padding-top: 24px;
+        padding-bottom: 56px;
         min-height: auto;
       }
 
@@ -812,20 +780,8 @@
         min-width: 0;
         width: 100%;
       }
+      /* countdown mobile: styles.css */
 
-      .countdown-timer {
-        gap: 8px;
-        flex-wrap: wrap;
-      }
-
-      .countdown-box {
-        width: 58px;
-        padding: 8px 6px;
-      }
-
-      .countdown-value {
-        font-size: 1.25rem;
-      }
 
       .step-card {
         padding-left: 70px;
@@ -839,7 +795,8 @@
 
     @media (max-width: 767.98px) {
       #hero {
-        padding: 72px 0 56px;
+        padding-top: 20px;
+        padding-bottom: 48px;
       }
 
       .badge-special {
@@ -895,10 +852,6 @@
     }
 
     @media (max-width: 420px) {
-      .countdown-box {
-        width: 52px;
-      }
-
       .step-card {
         padding-left: 0;
       }
@@ -943,37 +896,13 @@
   </style>
 </head>
 
-<body>
+<body class="has-bleed-hero">
 
   <!-- Header -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container navbar-shell">
-      <a class="navbar-brand" href="index.html">TasteIQ</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="locale-switch-wrap" data-locale-switcher></div>
-      <nav class="audience-switch" aria-label="Choose your business type">
-        <a class="audience-switch__link is-active" href="index.html" aria-current="page"><span class="as-full">Restaurants &amp; Cafés</span><span class="as-short">Restaurants</span></a>
-        <a class="audience-switch__link" href="hotels.html"><span class="as-full">Hotels &amp; Properties</span><span class="as-short">Hotels</span></a>
-      </nav>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#quickstart">15-Min Setup</a></li>
-          <li class="nav-item"><a class="nav-link" href="#switch">Why Switch</a></li>
-          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-          <li class="nav-item"><a class="nav-link" href="sales-partner.html">Partners</a></li>
-          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="#guide">Guide</a></li>
-          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div id="site-nav" data-root="" data-active="restaurants"></div>
 
-  <!-- Hero Section -->
-  <section id="hero" class="text-white text-center d-flex align-items-center">
+<!-- Hero Section -->
+  <section id="hero" class="text-white text-center d-flex align-items-start">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto hero-panel hero-animate">
@@ -981,23 +910,23 @@
           <div class="badge-special mb-3">Trusted by 5000+ profitable restaurant owners</div>
           <h1 class="display-4 fw-bold mb-3">Restaurant POS software that goes live in 15 minutes</h1>
           <p class="lead mb-2">Billing, KOT, inventory, GST invoices, and branded ordering—one platform for cafés, restaurants, and food businesses. Zero upfront risk. 14-day free trial.</p>
-          <div class="timer-box">
+          <div class="timer-box" data-offer-countdown>
             <p class="mb-0">Limited Time Offer Ends In:</p>
-            <div class="countdown-timer">
+            <div class="countdown-timer" role="timer" aria-live="off" aria-atomic="true">
               <div class="countdown-box">
-                <div class="countdown-value">14</div>
+                <div class="countdown-value" data-cd="days">--</div>
                 <div class="countdown-label">Days</div>
               </div>
               <div class="countdown-box">
-                <div class="countdown-value">06</div>
+                <div class="countdown-value" data-cd="hours">--</div>
                 <div class="countdown-label">Hours</div>
               </div>
               <div class="countdown-box">
-                <div class="countdown-value">32</div>
+                <div class="countdown-value" data-cd="mins">--</div>
                 <div class="countdown-label">Mins</div>
               </div>
               <div class="countdown-box">
-                <div class="countdown-value">00</div>
+                <div class="countdown-value" data-cd="secs">--</div>
                 <div class="countdown-label">Secs</div>
               </div>
             </div>
@@ -1033,54 +962,53 @@
   <!-- Quick Start Section -->
   <section id="quickstart" class="py-5 section-pad">
     <div class="container">
-      <div class="row align-items-center">
+      <div class="row align-items-center g-4 g-lg-5">
         <div class="col-lg-6 reveal">
-          <span class="section-eyebrow">Fast onboarding</span>
-          <h2 class="mb-4">Set up your restaurant POS in just 15 minutes</h2>
-          <p class="lead">No lengthy onboarding. No complicated training. Get your entire restaurant system running in minutes, not weeks.</p>
-          
-         
-          
+          <span class="section-eyebrow">15-minute setup</span>
+          <h2 class="mb-3">From empty outlet to first bill—fast</h2>
+          <p class="lead mb-2">Built for cafés, restaurants, and cloud kitchens. No long training packs. No locked hardware.</p>
+          <p class="text-muted small mb-4 mb-lg-4">Running a hotel or multi-outlet property? <a href="hotels.html#quickstart">See hotel &amp; property setup →</a></p>
+
           <div class="step-card">
             <div class="step-number">1</div>
-            <h3>Enter Basic Information</h3>
-            <p>Add your restaurant name, address, and tax details. Choose your preferred themes and colors to match your brand.</p>
+            <h3>Create your outlet profile</h3>
+            <p>Add name, address, GST/tax details, and brand colours. One profile powers billing, KOT, and reports.</p>
           </div>
 
-          
           <div class="step-card">
             <div class="step-number">2</div>
-            <h3>Upload Your Menu</h3>
-            <p>Simply take a photo of your menu or upload existing menu images. Our AI instantly extracts all items, prices, and categories.</p>
+            <h3>Load the menu with AI</h3>
+            <p>Snap a photo of your menu or upload images. TasteIQ extracts items, prices, and categories—no endless item entry.</p>
           </div>
-          
+
           <div class="step-card">
             <div class="step-number">3</div>
-            <h3>Go Live!</h3>
-            <p>Start using TasteIQ immediately on your existing devices. No special hardware required – works on any tablet, phone, or PC.</p>
-            
+            <h3>Go live on devices you already own</h3>
+            <p>Start billing and kitchen tickets on phones, tablets, or PCs. Staff pick it up in about 30 minutes of floor coaching.</p>
           </div>
-          
-          <div class="d-flex align-items-center mt-4">
-            <span class="badge-special me-2">Get Onboarding Specialist</span>
-            <p class="mb-0 ms-2">Get personalized handholding during setup </p>
+
+          <div class="setup-cta mt-4">
+            <a class="btn btn-whatsapp-submit" href="https://wa.me/916207466460?text=Hi%20TasteIQ%2C%20I%20want%20help%20setting%20up%20my%20restaurant%20POS" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-whatsapp me-2" aria-hidden="true"></i>WhatsApp setup help
+            </a>
+            <span class="setup-cta__hint">Talk to an onboarding specialist—optional, free while you evaluate.</span>
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="card shadow p-3">
-            <img src="https://images.pexels.com/photos/12935088/pexels-photo-12935088.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Cafe service with tablet ordering" class="img-fluid rounded-3 mb-3">
-            <div class="row text-center">
+          <div class="setup-visual card shadow p-3">
+            <img src="https://images.pexels.com/photos/12935088/pexels-photo-12935088.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Café counter with tablet ordering" class="img-fluid rounded-3 mb-3" width="800" height="520" loading="lazy">
+            <div class="row text-center setup-stats">
               <div class="col-4">
-                <h3 class="text-primary">15</h3>
-                <p class="small">Minutes to Setup</p>
+                <strong class="text-primary">15</strong>
+                <span>min to first bill</span>
               </div>
               <div class="col-4">
-                <h3 class="text-primary">30</h3>
-                <p class="small">Mins Staff Training</p>
+                <strong class="text-primary">30</strong>
+                <span>min staff ramp</span>
               </div>
               <div class="col-4">
-                <h3 class="text-primary">0</h3>
-                <p class="small">Special Hardware</p>
+                <strong class="text-primary">0</strong>
+                <span>forced hardware</span>
               </div>
             </div>
           </div>
@@ -1846,39 +1774,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h5 class="footer-brand">TasteIQ</h5>
-          <p>Restaurant POS software and management OS for modern food businesses. Built by IIT &amp; IIM founders who understand restaurants.</p>
-          <p class="mb-0"><a href="hotels.html" class="text-white">Also for hotels &amp; properties →</a></p>
-        </div>
-        <div class="col-md-4">
-          <h5>Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="#quickstart" class="text-white">15-Min Setup</a></li>
-            <li><a href="#switch" class="text-white">Why Switch</a></li>
-            <li><a href="pricing.html" class="text-white">Pricing Plans</a></li>
-            <li><a href="sales-partner.html" class="text-white">Sales Partners</a></li>
-            <li><a href="#features" class="text-white">Features</a></li>
-            <li><a href="hotels.html" class="text-white">Hotels &amp; Properties</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5>Contact Us</h5>
-          <p>Email: founders@tasteiq.in<br>
-          Phone: +91 6207466460<br>
-          Address: Bangalore, India</p>
-        </div>
-      </div>
-      <hr class="mt-4 mb-4">
-      <div class="text-center">
-        <p class="mb-1">&copy; 2026 TasteIQ. All rights reserved.</p>
-        <p class="small mb-0 opacity-75">Restaurant POS · <a href="pricing.html" class="text-white">Pricing</a> · <a href="sales-partner.html" class="text-white">Partners</a> · <a href="hotels.html" class="text-white">Hotel F&amp;B OS</a></p>
-      </div>
-    </div>
-  </footer>
+  <footer id="site-footer" data-root="" data-active="restaurants"></footer>
   <script> 
 
 document.getElementById('demoForm').addEventListener('submit', function(e) {
@@ -2055,71 +1951,12 @@ document.getElementById('demoForm').addEventListener('submit', function(e) {
             });
         }
     }
-    // Countdown Timer Script
-    document.addEventListener("DOMContentLoaded", function() {
-    // Set the end date for your limited time offer (YYYY, MM-1, DD, HH, MM, SS)
-    // Note: Months are 0-indexed in JavaScript (January = 0, December = 11)
-    const endDate = new Date(2026, 2, 31, 23, 59, 59).getTime();
-    
-    // Update the countdown every second
-    const countdownTimer = setInterval(function() {
-        // Get current date and time
-        const now = new Date().getTime();
-        
-        // Calculate the remaining time
-        const timeRemaining = endDate - now;
-        
-        // If the countdown is over, display zeros and stop the timer
-        if (timeRemaining < 0) {
-        clearInterval(countdownTimer);
-        document.querySelector(".countdown-timer .countdown-box:nth-child(1) .countdown-value").textContent = "00";
-        document.querySelector(".countdown-timer .countdown-box:nth-child(2) .countdown-value").textContent = "00";
-        document.querySelector(".countdown-timer .countdown-box:nth-child(3) .countdown-value").textContent = "00";
-        document.querySelector(".countdown-timer .countdown-box:nth-child(4) .countdown-value").textContent = "00";
-        return;
-        }
-        
-        // Calculate days, hours, minutes, seconds
-        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-        
-        // Add leading zeros for single digits
-        const formattedDays = days < 10 ? "0" + days : days;
-        const formattedHours = hours < 10 ? "0" + hours : hours;
-        const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
-        const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
-        
-        // Display the result in the countdown boxes
-        document.querySelector(".countdown-timer .countdown-box:nth-child(1) .countdown-value").textContent = formattedDays;
-        document.querySelector(".countdown-timer .countdown-box:nth-child(2) .countdown-value").textContent = formattedHours;
-        document.querySelector(".countdown-timer .countdown-box:nth-child(3) .countdown-value").textContent = formattedMinutes;
-        document.querySelector(".countdown-timer .countdown-box:nth-child(4) .countdown-value").textContent = formattedSeconds;
-        
-    }, 1000); // Update every second
-    });
   </script>
-  
-  <script>
-    (function () {
-      var nodes = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window) || !nodes.length) {
-        nodes.forEach(function (el) { el.classList.add('is-visible'); });
-        return;
-      }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-      nodes.forEach(function (el) { io.observe(el); });
-    })();
-  </script>
-    <script src="assets/js/locale.js" defer></script>
+
+  <script src="assets/js/countdown-offer.js" defer></script>
+  <script src="assets/js/reveal.js" defer></script>
+  <script src="assets/js/site-chrome.js"></script>
+  <script src="assets/js/locale.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

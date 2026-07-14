@@ -10,6 +10,11 @@
   <link rel="alternate" hreflang="en" href="https://tasteiq.in/hotels.html">
   <link rel="alternate" hreflang="hi" href="https://tasteiq.in/hi/hotels.html">
   <link rel="alternate" hreflang="ar" href="https://tasteiq.in/ar/hotels.html">
+  <link rel="alternate" hreflang="vi" href="https://tasteiq.in/vi/hotels.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://tasteiq.in/zh/hotels.html">
+  <link rel="alternate" hreflang="sw" href="https://tasteiq.in/sw/hotels.html">
+  <link rel="alternate" hreflang="fr" href="https://tasteiq.in/fr/hotels.html">
+  <link rel="alternate" hreflang="pt" href="https://tasteiq.in/pt/hotels.html">
   <link rel="alternate" hreflang="x-default" href="https://tasteiq.in/hotels.html">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="keywords" content="hotel F&B POS, hotel OTA management, channel manager hotel, Booking.com Agoda MakeMyTrip, property dining POS, multi-outlet hotel software, international hotel POS, TasteIQ hotels">
@@ -47,7 +52,7 @@
         "@id": "https://tasteiq.in/hotels.html#webpage",
         "url": "https://tasteiq.in/hotels.html",
         "name": "Hotel F&B POS Software India | TasteIQ",
-        "description": "TasteIQ hotel and property F&B POS for multi-outlet dining and OTA channel management worldwide.",
+        "description": "TasteIQ hotel and property platform for room management, OTA sync, and multi-outlet F&B operations worldwide.",
         "isPartOf": { "@id": "https://tasteiq.in/#website" },
         "about": { "@id": "https://tasteiq.in/hotels.html#software" },
         "inLanguage": "en"
@@ -60,7 +65,7 @@
         "applicationSubCategory": "Hotel F&B Point of Sale",
         "operatingSystem": "Web, Android, iOS, Windows, macOS",
         "url": "https://tasteiq.in/hotels.html",
-        "description": "Hotel and property F&B operations platform with multi-outlet billing, KOT, inventory, AI menu setup, and branded guest ordering.",
+        "description": "Hotel and property platform with native room management, OTA sync, and multi-outlet F&B billing, inventory, and guest ordering.",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -131,7 +136,7 @@
             "name": "Does TasteIQ replace a full hotel PMS?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "TasteIQ focuses on hotel and property F&B operations (dining outlets), not full room reservations PMS. It complements your PMS by modernizing restaurant, café, room service, and banquet workflows."
+              "text": "TasteIQ includes native property management—rooms, bookings, rates/availability, events, banquets, maintenance, and night audit—plus full F&B operations. You can run it as a single hospitality OS or migrate gradually from another PMS."
             }
           }
         ]
@@ -245,8 +250,11 @@
     }
     
     #hero {
+      margin-top: 0;
+      padding-top: 32px;
+      padding-bottom: 88px;
       background: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      padding: 120px 0;
+      
       position: relative;
     }
     
@@ -282,6 +290,13 @@
       box-shadow: 0 28px 70px rgba(0, 0, 0, 0.38);
     }
 
+
+    #hero .hero-panel {
+      /* panel glass + padding come from styles.css for EN + locale parity */
+      max-width: 920px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     #hero .badge-special {
       animation: heroRise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.04s both;
     }
@@ -297,9 +312,7 @@
       gap: 14px;
     }
 
-    .hero-actions .btn {
-      min-width: 220px;
-    }
+    .hero-actions .btn { min-width: 0; max-width: 100%; }
     
     .feature-list li {
       margin-bottom: 15px;
@@ -352,18 +365,7 @@
       font-weight: 500;
     }
     
-    .timer-box {
-      background-color: rgba(0, 0, 0, 0.8);
-      border-radius: 10px;
-      padding: 10px 15px;
-      margin-top: 15px;
-      display: inline-block;
-    }
-    
-    .timer-box span {
-      font-size: 2rem;
-      font-weight: 700;
-    }
+    /* timer-box / countdown: owned by styles.css (locale-safe sizing) */
     
     .step-card {
       position: relative;
@@ -470,35 +472,8 @@
       font-weight: 600;
     }
     
-    .countdown-timer {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 15px 0;
-    }
-    
-    .countdown-box {
-      background: rgba(255, 255, 255, 0.16);
-      color: white;
-      padding: 10px;
-      border-radius: 10px;
-      width: 60px;
-      text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
 
-    .timer-box {
-      background-color: rgba(12, 12, 22, 0.6);
-      border-radius: 12px;
-      padding: 10px 15px;
-      margin-top: 15px;
-      display: inline-block;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
+    /* countdown styles: see styles.css */
 
     .bg-light {
       background-color: #f4f6fb !important;
@@ -518,16 +493,8 @@
       border-color: rgba(110, 72, 170, 0.15);
     }
     
-    .countdown-value {
-      font-size: 1.5rem;
-      font-weight: 700;
-      line-height: 1;
-    }
-    
-    .countdown-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-    }
+
+    /* countdown styles: see styles.css */
 
     .whatsapp-widget {
             position: fixed;
@@ -784,7 +751,8 @@
     /* Mobile layout polish */
     @media (max-width: 991.98px) {
       #hero {
-        padding: 88px 0 72px;
+        padding-top: 24px;
+        padding-bottom: 56px;
         min-height: auto;
       }
 
@@ -811,20 +779,8 @@
         min-width: 0;
         width: 100%;
       }
+      /* countdown mobile: styles.css */
 
-      .countdown-timer {
-        gap: 8px;
-        flex-wrap: wrap;
-      }
-
-      .countdown-box {
-        width: 58px;
-        padding: 8px 6px;
-      }
-
-      .countdown-value {
-        font-size: 1.25rem;
-      }
 
       .step-card {
         padding-left: 70px;
@@ -838,7 +794,8 @@
 
     @media (max-width: 767.98px) {
       #hero {
-        padding: 72px 0 56px;
+        padding-top: 20px;
+        padding-bottom: 48px;
       }
 
       .badge-special {
@@ -894,10 +851,6 @@
     }
 
     @media (max-width: 420px) {
-      .countdown-box {
-        width: 52px;
-      }
-
       .step-card {
         padding-left: 0;
       }
@@ -942,38 +895,13 @@
   </style>
 </head>
 
-<body>
+<body class="has-bleed-hero">
 
   <!-- Header -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container navbar-shell">
-      <a class="navbar-brand" href="index.html">TasteIQ</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="locale-switch-wrap" data-locale-switcher></div>
-      <nav class="audience-switch" aria-label="Choose your business type">
-        <a class="audience-switch__link" href="index.html"><span class="as-full">Restaurants &amp; Cafés</span><span class="as-short">Restaurants</span></a>
-        <a class="audience-switch__link is-active" href="hotels.html" aria-current="page"><span class="as-full">Hotels &amp; Properties</span><span class="as-short">Hotels</span></a>
-      </nav>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#otas">OTA Partners</a></li>
-          <li class="nav-item"><a class="nav-link" href="#quickstart">15-Min Setup</a></li>
-          <li class="nav-item"><a class="nav-link" href="#switch">Why Switch</a></li>
-          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-          <li class="nav-item"><a class="nav-link" href="sales-partner.html">Partners</a></li>
-          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="hotel-ota-management.html">OTA Guide</a></li>
-          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div id="site-nav" data-root="" data-active="hotels"></div>
 
-  <!-- Hero Section -->
-  <section id="hero" class="text-white text-center d-flex align-items-center">
+<!-- Hero Section -->
+  <section id="hero" class="text-white text-center d-flex align-items-start">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto hero-panel hero-animate">
@@ -981,23 +909,23 @@
           <div class="badge-special mb-3">International platform · Hotels, resorts &amp; multi-outlet properties worldwide</div>
           <h1 class="display-4 fw-bold mb-3">Hotel F&amp;B, OTA inventory &amp; bookings—one global platform</h1>
           <p class="lead mb-2">Sync room inventory and reservations across Booking.com, Agoda, MakeMyTrip, Airbnb, and more—while running restaurant, café, room service, and banquet outlets from one dashboard. Multi-currency, multi-tax. Zero upfront risk.</p>
-          <div class="timer-box">
+          <div class="timer-box" data-offer-countdown>
             <p class="mb-0">Limited Time Offer Ends In:</p>
-            <div class="countdown-timer">
+            <div class="countdown-timer" role="timer" aria-live="off" aria-atomic="true">
               <div class="countdown-box">
-                <div class="countdown-value">14</div>
+                <div class="countdown-value" data-cd="days">--</div>
                 <div class="countdown-label">Days</div>
               </div>
               <div class="countdown-box">
-                <div class="countdown-value">06</div>
+                <div class="countdown-value" data-cd="hours">--</div>
                 <div class="countdown-label">Hours</div>
               </div>
               <div class="countdown-box">
-                <div class="countdown-value">32</div>
+                <div class="countdown-value" data-cd="mins">--</div>
                 <div class="countdown-label">Mins</div>
               </div>
               <div class="countdown-box">
-                <div class="countdown-value">00</div>
+                <div class="countdown-value" data-cd="secs">--</div>
                 <div class="countdown-label">Secs</div>
               </div>
             </div>
@@ -1033,54 +961,53 @@
   <!-- Quick Start Section -->
   <section id="quickstart" class="py-5 section-pad">
     <div class="container">
-      <div class="row align-items-center">
+      <div class="row align-items-center g-4 g-lg-5">
         <div class="col-lg-6 reveal">
           <span class="section-eyebrow">Property onboarding</span>
-          <h2 class="mb-4">Set up your hotel outlets in just 15 minutes</h2>
-          <p class="lead">No lengthy onboarding. No complicated training. Get dining outlets across your property live in minutes, not weeks.</p>
-          
-         
-          
+          <h2 class="mb-3">Hotel F&amp;B live across outlets—fast</h2>
+          <p class="lead mb-2">One OS for restaurant, café, room service, and banquet counters—without weeks of IT projects.</p>
+          <p class="text-muted small mb-4">Running a standalone café or restaurant? <a href="index.html#quickstart">See restaurant setup →</a></p>
+
           <div class="step-card">
             <div class="step-number">1</div>
-            <h3>Enter Property Details</h3>
-            <p>Add your hotel or property name, address, and tax details. Configure outlets and brand themes for each dining space.</p>
+            <h3>Map the property</h3>
+            <p>Add hotel details and create outlets (coffee shop, all-day dining, room service, banquet). Tax profiles follow your brand standards.</p>
           </div>
 
-          
           <div class="step-card">
             <div class="step-number">2</div>
-            <h3>Upload Outlet Menus</h3>
-            <p>Photograph restaurant, café, or room-service menus. Our AI extracts items, prices, and categories for every outlet.</p>
+            <h3>Load menus per outlet</h3>
+            <p>Photograph or upload each outlet’s menu—including room-service lists. AI extracts items and prices so desks aren’t stuck typing catalogs.</p>
           </div>
-          
+
           <div class="step-card">
             <div class="step-number">3</div>
-            <h3>Go Live Across Outlets</h3>
-            <p>Start billing across outlets on your existing tablets, phones, or PCs. No special hardware required.</p>
-            
+            <h3>Go live on one dashboard</h3>
+            <p>Staff bill from tablets or phones you already use. You see every outlet in one place—ready for OTA / inventory workflows next.</p>
           </div>
-          
-          <div class="d-flex align-items-center mt-4">
-            <span class="badge-special me-2">Get Onboarding Specialist</span>
-            <p class="mb-0 ms-2">Get personalized handholding during setup </p>
+
+          <div class="setup-cta mt-4">
+            <a class="btn btn-whatsapp-submit" href="https://wa.me/916207466460?text=Hi%20TasteIQ%2C%20I%20want%20help%20setting%20up%20hotel%20F%26B%20outlets" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-whatsapp me-2" aria-hidden="true"></i>WhatsApp property setup
+            </a>
+            <span class="setup-cta__hint">Multi-outlet properties get guided onboarding—no guesswork on day one.</span>
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="card shadow p-3">
-            <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Hotel property with dining operations" class="img-fluid rounded-3 mb-3">
-            <div class="row text-center">
+          <div class="setup-visual card shadow p-3">
+            <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Hotel property dining operations" class="img-fluid rounded-3 mb-3" width="800" height="520" loading="lazy">
+            <div class="row text-center setup-stats">
               <div class="col-4">
-                <h3 class="text-primary">15</h3>
-                <p class="small">Minutes to Setup</p>
+                <strong class="text-primary">15</strong>
+                <span>min first outlet</span>
               </div>
               <div class="col-4">
-                <h3 class="text-primary">30</h3>
-                <p class="small">Mins Staff Training</p>
+                <strong class="text-primary">1</strong>
+                <span>property dashboard</span>
               </div>
               <div class="col-4">
-                <h3 class="text-primary">0</h3>
-                <p class="small">Special Hardware</p>
+                <strong class="text-primary">0</strong>
+                <span>forced hardware</span>
               </div>
             </div>
           </div>
@@ -1095,7 +1022,7 @@
       <div class="text-center reveal mb-5">
         <span class="section-eyebrow">Why switch</span>
         <h2 class="mb-2">Why hotels &amp; properties switch to TasteIQ</h2>
-        <p class="section-subtitle mx-auto mb-0">One F&amp;B OS for every outlet—lower cost, cleaner operations, happier guests.</p>
+        <p class="section-subtitle mx-auto mb-0">One hospitality OS for rooms, outlets, and guest experiences—lower cost, cleaner operations, happier guests.</p>
       </div>
       
       <div class="row">
@@ -1383,8 +1310,8 @@
     <div class="container">
       <div class="text-center reveal mb-5">
         <span class="section-eyebrow">Platform</span>
-        <h2 class="mb-2">All-in-one hotel &amp; property F&amp;B system</h2>
-        <p class="section-subtitle mx-auto mb-0">Everything you need to run dining outlets and grow in-house guest revenue.</p>
+        <h2 class="mb-2">All-in-one hotel &amp; property operations system</h2>
+        <p class="section-subtitle mx-auto mb-0">Run rooms, bookings, and multi-outlet dining from one property brain.</p>
       </div>
       
       <div class="row g-4">
@@ -1740,7 +1667,7 @@
             <li><strong>Setup:</strong> Menu photos to live billing in minutes</li>
             <li><strong>Risk:</strong> Parallel run free until your current subscription ends</li>
             <li><strong>Guest revenue:</strong> Branded ordering that keeps more spend on-property</li>
-            <li><strong>Scope:</strong> Complements your PMS—focuses on F&amp;B operations, not room reservations</li>
+            <li><strong>Scope:</strong> Native property management (rooms, bookings, events, banquets, maintenance, night audit) plus full F&amp;B</li>
           </ul>
         </article>
         <aside class="seo-list-card">
@@ -1904,7 +1831,7 @@
               </h2>
               <div id="faqCollapse8" class="accordion-collapse collapse" aria-labelledby="faq8" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  No. TasteIQ focuses on hotel and property F&amp;B operations, not room reservations or full PMS. It complements your PMS by modernizing dining outlet workflows and guest ordering.
+                  TasteIQ includes native property management—rooms, bookings, rates/availability, events, banquets, maintenance, and night audit—plus full F&amp;B. You can run it as a single hospitality OS or migrate gradually from another PMS.
                 </div>
               </div>
             </div>
@@ -1970,39 +1897,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h5 class="footer-brand">TasteIQ</h5>
-          <p>Hotel F&amp;B POS and property dining OS. Built by IIT &amp; IIM founders who understand hospitality operations.</p>
-          <p class="mb-0"><a href="index.html" class="text-white">Also for restaurants &amp; cafés →</a></p>
-        </div>
-        <div class="col-md-4">
-          <h5>Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="#quickstart" class="text-white">15-Min Setup</a></li>
-            <li><a href="#switch" class="text-white">Why Switch</a></li>
-            <li><a href="pricing.html" class="text-white">Pricing Plans</a></li>
-            <li><a href="sales-partner.html" class="text-white">Sales Partners</a></li>
-            <li><a href="#features" class="text-white">Features</a></li>
-            <li><a href="index.html" class="text-white">Restaurants &amp; Cafés</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5>Contact Us</h5>
-          <p>Email: founders@tasteiq.in<br>
-          Phone: +91 6207466460<br>
-          Address: Bangalore, India</p>
-        </div>
-      </div>
-      <hr class="mt-4 mb-4">
-      <div class="text-center">
-        <p class="mb-1">&copy; 2026 TasteIQ. All rights reserved.</p>
-        <p class="small mb-0 opacity-75">Hotel F&amp;B · <a href="pricing.html" class="text-white">Pricing</a> · <a href="sales-partner.html" class="text-white">Partners</a> · <a href="index.html" class="text-white">Restaurant POS</a></p>
-      </div>
-    </div>
-  </footer>
+  <footer id="site-footer" data-root="" data-active="hotels"></footer>
   <script> 
 
 document.getElementById('demoForm').addEventListener('submit', function(e) {
@@ -2179,71 +2074,12 @@ document.getElementById('demoForm').addEventListener('submit', function(e) {
             });
         }
     }
-    // Countdown Timer Script
-    document.addEventListener("DOMContentLoaded", function() {
-    // Set the end date for your limited time offer (YYYY, MM-1, DD, HH, MM, SS)
-    // Note: Months are 0-indexed in JavaScript (January = 0, December = 11)
-    const endDate = new Date(2026, 2, 31, 23, 59, 59).getTime();
-    
-    // Update the countdown every second
-    const countdownTimer = setInterval(function() {
-        // Get current date and time
-        const now = new Date().getTime();
-        
-        // Calculate the remaining time
-        const timeRemaining = endDate - now;
-        
-        // If the countdown is over, display zeros and stop the timer
-        if (timeRemaining < 0) {
-        clearInterval(countdownTimer);
-        document.querySelector(".countdown-timer .countdown-box:nth-child(1) .countdown-value").textContent = "00";
-        document.querySelector(".countdown-timer .countdown-box:nth-child(2) .countdown-value").textContent = "00";
-        document.querySelector(".countdown-timer .countdown-box:nth-child(3) .countdown-value").textContent = "00";
-        document.querySelector(".countdown-timer .countdown-box:nth-child(4) .countdown-value").textContent = "00";
-        return;
-        }
-        
-        // Calculate days, hours, minutes, seconds
-        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-        
-        // Add leading zeros for single digits
-        const formattedDays = days < 10 ? "0" + days : days;
-        const formattedHours = hours < 10 ? "0" + hours : hours;
-        const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
-        const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
-        
-        // Display the result in the countdown boxes
-        document.querySelector(".countdown-timer .countdown-box:nth-child(1) .countdown-value").textContent = formattedDays;
-        document.querySelector(".countdown-timer .countdown-box:nth-child(2) .countdown-value").textContent = formattedHours;
-        document.querySelector(".countdown-timer .countdown-box:nth-child(3) .countdown-value").textContent = formattedMinutes;
-        document.querySelector(".countdown-timer .countdown-box:nth-child(4) .countdown-value").textContent = formattedSeconds;
-        
-    }, 1000); // Update every second
-    });
   </script>
-  
-  <script>
-    (function () {
-      var nodes = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window) || !nodes.length) {
-        nodes.forEach(function (el) { el.classList.add('is-visible'); });
-        return;
-      }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-      nodes.forEach(function (el) { io.observe(el); });
-    })();
-  </script>
-    <script src="assets/js/locale.js" defer></script>
+
+  <script src="assets/js/countdown-offer.js" defer></script>
+  <script src="assets/js/reveal.js" defer></script>
+  <script src="assets/js/site-chrome.js"></script>
+  <script src="assets/js/locale.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
